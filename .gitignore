@@ -1,0 +1,14 @@
+# Backend
+backend/target/
+*.class
+*.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# IDE y sistema
+.idea/
+.vscode/
+*.iml
+.DS_Store

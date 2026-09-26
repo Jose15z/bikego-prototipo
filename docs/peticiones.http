@@ -1,0 +1,35 @@
+### F-01 bicicletas cercanas a la Plaza de Bolivar (radio inicial 1 km)
+GET http://localhost:8080/api/bicicletas/cercanas?lat=4.53389&lng=-75.68111
+
+### F-01 radio ampliado a 5 km
+GET http://localhost:8080/api/bicicletas/cercanas?lat=4.53389&lng=-75.68111&radio=5000
+
+### F-01 detalle con revalidacion (BG-005 esta en uso: 409)
+GET http://localhost:8080/api/bicicletas/BG-005
+
+### F-02 camino feliz
+POST http://localhost:8080/api/alquileres
+Content-Type: application/json
+
+{"usuarioId": "U-001", "bicicletaSeleccionadaId": "BG-001", "codigoQr": "BIKEGO:BG-001"}
+
+### F-02 pago rechazado (tarjeta vencida)
+POST http://localhost:8080/api/alquileres
+Content-Type: application/json
+
+{"usuarioId": "U-003", "bicicletaSeleccionadaId": "BG-004", "codigoQr": "BIKEGO:BG-004"}
+
+### F-02 actualizar metodo de pago
+PUT http://localhost:8080/api/usuarios/U-003/metodo-pago
+Content-Type: application/json
+
+{"numeroTarjeta": "4111 1111 1111 1111", "vencimiento": "12/29", "titular": "Valentina Ríos"}
+
+### F-02 candado sin respuesta (tarda unos 15 s: 3 intentos de 5 s)
+POST http://localhost:8080/api/alquileres
+Content-Type: application/json
+
+{"usuarioId": "U-006", "bicicletaSeleccionadaId": "BG-008", "codigoQr": "BIKEGO:BG-008"}
+
+### Reiniciar datos de prueba
+POST http://localhost:8080/api/demo/reiniciar
