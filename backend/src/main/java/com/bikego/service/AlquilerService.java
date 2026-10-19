@@ -83,12 +83,12 @@ public class AlquilerService {
         validarEstadoBicicleta(bici);
 
         // SWR-02.3
-        Usuario usuario = usuarios.findById(usuarioId)
+        Usuario usuario = usuarios.bloquear(usuarioId)
                 .orElseThrow(() -> new NegocioException(CodigoError.USUARIO_NO_ENCONTRADO, "Usuario no encontrado"));
         validarCuenta(usuario, ahora);
 
         // SWR-02.4 y SWR-02.7
-        ResultadoPago pago = pasarela.verificar(usuario.getTokenPago());
+        ResultadoPago pago = PagoSeguro.ejecutar(() -> pasarela.verificar(usuario.getTokenPago()));
         if (!pago.autorizado()) {
             LocalDateTime hasta = ahora.plusMinutes(props.getBloqueoPagoMinutos());
             usuario.bloquearHasta(hasta);
@@ -102,7 +102,8 @@ public class AlquilerService {
         // SWR-02.5
         desbloquearConReintentos(bici.getId());
 
-        // SWR-02.6
+        // SWR-02.6: el tiempo facturable comienza tras la confirmación del candado.
+        ahora = LocalDateTime.now(clock).truncatedTo(ChronoUnit.SECONDS);
         bici.marcarEnUso();
         Viaje viaje = viajes.save(new Viaje(usuario, bici, ahora));
         log.info("Viaje {} iniciado por {} con bicicleta {}", viaje.getIdViaje(), usuarioId, bici.getId());
@@ -113,6 +114,16 @@ public class AlquilerService {
     public ViajeDto consultarViaje(Long idViaje) {
         Viaje v = viajes.findById(idViaje)
                 .orElseThrow(() -> new NegocioException(CodigoError.VIAJE_NO_ENCONTRADO, "Viaje no encontrado"));
+        return toDto(v, LocalDateTime.now(clock));
+    }
+
+    @Transactional(readOnly = true)
+    public ViajeDto consultarViaje(Long idViaje, String usuarioId) {
+        Viaje v = viajes.findById(idViaje)
+                .orElseThrow(() -> new NegocioException(CodigoError.VIAJE_NO_ENCONTRADO, "Viaje no encontrado"));
+        if (!v.getUsuario().getId().equals(usuarioId)) {
+            throw new NegocioException(CodigoError.VIAJE_NO_ENCONTRADO, "Viaje no encontrado");
+        }
         return toDto(v, LocalDateTime.now(clock));
     }
 
@@ -135,6 +146,9 @@ public class AlquilerService {
     private void validarCuenta(Usuario u, LocalDateTime ahora) {
         if (u.getEstadoCuenta() == EstadoCuenta.SUSPENDIDA) {
             throw new NegocioException(CodigoError.CUENTA_SUSPENDIDA, "Tu cuenta está suspendida");
+        }
+        if (u.getEstadoCuenta() == EstadoCuenta.PENDIENTE_VERIFICACION) {
+            throw new NegocioException(CodigoError.CUENTA_NO_VERIFICADA, "Debes verificar tu cuenta");
         }
         if (u.estaBloqueado(ahora)) {
             throw new NegocioException(CodigoError.USUARIO_BLOQUEADO,
@@ -179,12 +193,14 @@ public class AlquilerService {
     }
 
     private ViajeDto toDto(Viaje v, LocalDateTime ahora) {
-        long segundos = Math.max(0, Duration.between(v.getHoraInicio(), ahora).getSeconds());
+        long segundos = Math.max(0, Duration.between(v.getHoraInicio(), v.getHoraFin() == null ? ahora : v.getHoraFin()).getSeconds());
         long minutosCobrables = (long) Math.ceil(segundos / 60.0);
-        long costo = props.getTarifaBase() + minutosCobrables * props.getTarifaMinuto();
+        long costo = v.getHoraFin() == null ? props.getTarifaBase() + minutosCobrables * props.getTarifaMinuto() : v.getTotal();
         double distanciaKm = Math.round(props.getVelocidadPromedioKmh() * segundos / 3600.0 * 100) / 100.0;
         return new ViajeDto(v.getIdViaje(), v.getUsuario().getId(), v.getBicicleta().getId(),
                 v.getHoraInicio(), v.getEstado().name(), segundos, distanciaKm, costo,
-                props.getTarifaBase(), props.getTarifaMinuto(), props.getVelocidadPromedioKmh());
+                v.getHoraFin() == null ? props.getTarifaBase() : v.getTarifaBaseAplicada(),
+                v.getHoraFin() == null ? props.getTarifaMinuto() : v.getTarifaMinutoAplicada(),
+                props.getVelocidadPromedioKmh(), v.isConIncidente());
     }
 }

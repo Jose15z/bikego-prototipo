@@ -6,7 +6,6 @@ import MetodoPagoForm from '../components/MetodoPagoForm'
 
 interface Props {
   bicicleta: Bicicleta
-  usuarioId: string
   onVolver: () => void
   onViajeIniciado: (v: Viaje) => void
   onMetodoPagoActualizado: () => void
@@ -32,7 +31,7 @@ const TITULOS: Record<string, string> = {
 }
 
 /** F-02 Iniciar alquiler de bicicleta mediante codigo QR (SWR-02.1 a SWR-02.7). */
-export default function EscanearScreen({ bicicleta, usuarioId, onVolver, onViajeIniciado, onMetodoPagoActualizado }: Props) {
+export default function EscanearScreen({ bicicleta, onVolver, onViajeIniciado, onMetodoPagoActualizado }: Props) {
   const [modo, setModo] = useState<Modo>('camara')
   const [idManual, setIdManual] = useState('')
   const [procesando, setProcesando] = useState(false)
@@ -46,7 +45,7 @@ export default function EscanearScreen({ bicicleta, usuarioId, onVolver, onViaje
       setProcesando(true)
       setError(null)
       try {
-        const viaje = await api.iniciarAlquiler(usuarioId, bicicleta.id, contenido)
+        const viaje = await api.iniciarAlquiler(bicicleta.id, contenido)
         onViajeIniciado(viaje)
       } catch (e) {
         setError(e instanceof ApiError ? e : null)
@@ -54,7 +53,7 @@ export default function EscanearScreen({ bicicleta, usuarioId, onVolver, onViaje
         setProcesando(false)
       }
     },
-    [usuarioId, bicicleta.id, onViajeIniciado],
+    [bicicleta.id, onViajeIniciado],
   )
 
   const subirImagen = async (archivo: File | undefined) => {
@@ -94,7 +93,6 @@ export default function EscanearScreen({ bicicleta, usuarioId, onVolver, onViaje
 
         {esPago && !pagoActualizado && (
           <MetodoPagoForm
-            usuarioId={usuarioId}
             onGuardado={() => {
               setPagoActualizado(true)
               onMetodoPagoActualizado()
@@ -123,9 +121,9 @@ export default function EscanearScreen({ bicicleta, usuarioId, onVolver, onViaje
       <p className="sub">El código está en el manubrio de la bicicleta.</p>
 
       <div className="pestanas" role="tablist">
-        <button role="tab" className={modo === 'camara' ? 'activo' : ''} onClick={() => setModo('camara')}>Cámara</button>
-        <button role="tab" className={modo === 'imagen' ? 'activo' : ''} onClick={() => setModo('imagen')}>Subir imagen</button>
-        <button role="tab" className={modo === 'manual' ? 'activo' : ''} onClick={() => setModo('manual')}>Ingresar ID</button>
+        <button role="tab" aria-selected={modo === 'camara'} className={modo === 'camara' ? 'activo' : ''} onClick={() => setModo('camara')}>Cámara</button>
+        <button role="tab" aria-selected={modo === 'imagen'} className={modo === 'imagen' ? 'activo' : ''} onClick={() => setModo('imagen')}>Subir imagen</button>
+        <button role="tab" aria-selected={modo === 'manual'} className={modo === 'manual' ? 'activo' : ''} onClick={() => setModo('manual')}>Ingresar ID</button>
       </div>
 
       {modo === 'camara' && <QrScanner onLeido={iniciar} />}

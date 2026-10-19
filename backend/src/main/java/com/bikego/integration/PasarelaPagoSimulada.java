@@ -10,9 +10,18 @@ import java.time.YearMonth;
  */
 @Component
 public class PasarelaPagoSimulada implements PasarelaPagoClient {
+    private final java.util.Map<String, ResultadoPago> cobros = new java.util.concurrent.ConcurrentHashMap<>();
+    @Override
+    public synchronized ResultadoPago cobrar(String token, long monto, String clave) {
+        if (cobros.containsKey(clave)) return cobros.get(clave);
+        ResultadoPago resultado = verificar(token);
+        if (resultado.autorizado()) cobros.put(clave, resultado);
+        return resultado;
+    }
 
     @Override
     public ResultadoPago verificar(String tokenPago) {
+        if ("tok_sin_servicio".equals(tokenPago)) throw new IllegalStateException("Pasarela sin conexión");
         if (tokenPago == null) {
             return ResultadoPago.RECHAZADA;
         }

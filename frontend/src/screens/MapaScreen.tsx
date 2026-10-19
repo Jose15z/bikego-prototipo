@@ -29,6 +29,11 @@ export default function MapaScreen({ ubicacion, onUbicacion, onSeleccionar }: Pr
     }
     navigator.geolocation.getCurrentPosition(
       (pos) => {
+        if (pos.coords.accuracy > 50) {
+          setPermisoDenegado(true)
+          setError('La precisión GPS supera los 50 m. Elige una estación o vuelve a intentar al aire libre.')
+          return
+        }
         setPermisoDenegado(false)
         onUbicacion({
           lat: pos.coords.latitude,
@@ -93,9 +98,9 @@ export default function MapaScreen({ ubicacion, onUbicacion, onSeleccionar }: Pr
         </p>
       )}
 
-      {(permisoDenegado || !ubicacion || ubicacion.origen === 'estacion') && (
+      {(permisoDenegado || !ubicacion || ubicacion.origen === 'estacion' || (ubicacion.precisionMetros ?? 0) > 50) && (
         <div className={permisoDenegado ? 'tarjeta aviso' : 'tarjeta'}>
-          {permisoDenegado && <p>No tenemos permiso de ubicación. Elige una estación como punto de búsqueda.</p>}
+          {permisoDenegado && <p>No tenemos una ubicación GPS precisa. Elige una estación como punto de búsqueda.</p>}
           <label htmlFor="estacion">Estación</label>
           <select
             id="estacion"
@@ -167,7 +172,7 @@ export default function MapaScreen({ ubicacion, onUbicacion, onSeleccionar }: Pr
 
       {tiempoMs !== null && (
         <p className="metrica">
-          {busqueda?.bicicletas.length ?? 0} bicicletas en {radio / 1000} km · respuesta en {tiempoMs} ms (meta 3000 ms, SWR-01.4)
+          {busqueda?.bicicletas.length ?? 0} bicicletas en {radio / 1000} km · respuesta en {tiempoMs} ms
         </p>
       )}
     </div>

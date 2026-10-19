@@ -1,9 +1,17 @@
-# BikeGo prototipo
+# BikeGo
 
-Prototipo del Parcial 1 de Ingeniería de Software II (Universidad del Quindío). Implementa dos de las ocho funcionalidades del Plan de Requisitos v0.3 de BikeGo, el sistema de alquiler de bicicletas eléctricas mediante aplicación móvil:
+Aplicación de Ingeniería de Software II (Universidad del Quindío) para el alquiler de bicicletas eléctricas. Partió del prototipo del Parcial 1 y ahora incorpora registro y autenticación persistentes:
 
 - F-01 Consultar bicicletas disponibles cercanas (PBI-02, Jira BG-2)
 - F-02 Iniciar alquiler de bicicleta mediante código QR (PBI-01, Jira BG-1)
+- F-03 Registrar usuario en la plataforma (PBI-03, Jira BG-3), con verificación, reenvío de código, inicio/cierre de sesión y tarjeta opcional
+- F-04 Validar método de pago, rechazos, bloqueos y reintentos
+- F-05 Finalizar viaje en zona habilitada con confirmación del candado
+- F-06 Calcular y procesar pago, deuda, recargo y recibo digital
+- F-07 Reportar incidentes y revisar/anular cobros como operador
+- F-08 Registrar y cerrar mantenimientos con permisos de técnico/operador
+
+La matriz completa de los **42 SWR** está en [docs/TRAZABILIDAD_REQUISITOS.md](docs/TRAZABILIDAD_REQUISITOS.md), con código, pruebas y límites de las integraciones simuladas. La interfaz se adapta a móvil y escritorio e incluye historial, recuperación del viaje activo, cuenta/pagos, notificaciones y panel de flota.
 
 Autores: Jose Manuel Rodriguez Ospina y Juan Esteban Gutierrez Higuita
 
@@ -11,12 +19,12 @@ Autores: Jose Manuel Rodriguez Ospina y Juan Esteban Gutierrez Higuita
 
 ```
 bikego-prototipo/
-├── backend/    API REST en Java 17 + Spring Boot 3.3 + H2 en memoria
+├── backend/    API REST en Java 17 + Spring Boot 3.3 + H2 persistente
 ├── frontend/   Aplicación React 18 + TypeScript + Vite (vista móvil)
 └── docs/       QR de prueba y colección de peticiones HTTP
 ```
 
-El backend incluye dos simuladores para los sistemas externos del Student Book: la pasarela de pago (modo sandbox) y la plataforma IoT del candado inteligente. Los dos están detrás de interfaces (`PasarelaPagoClient` y `CandadoIotClient`), así que cambiarlos por integraciones reales no toca la lógica de negocio.
+El backend incluye adaptadores locales para los sistemas externos del Student Book: pasarela de pago, plataforma IoT y envío del código de verificación. Están detrás de interfaces para poder sustituirlos por proveedores reales sin cambiar la lógica de negocio. Las tablas CRC de F-03 están en `docs/CRC_F03_Registro_Autenticacion.md`.
 
 ## Requisitos para correrlo
 
@@ -34,7 +42,7 @@ cd backend
 mvn spring-boot:run
 ```
 
-El API queda en http://localhost:8080. La consola de H2 está en http://localhost:8080/h2-console (JDBC URL `jdbc:h2:mem:bikego`, usuario `sa`, sin contraseña).
+El API queda en http://localhost:8080. Los datos se guardan en `backend/data/` y sobreviven a los reinicios. La consola de H2 está en http://localhost:8080/h2-console (JDBC URL `jdbc:h2:file:./data/bikego`, usuario `sa`, sin contraseña).
 
 En otra terminal:
 
@@ -53,7 +61,13 @@ cd backend
 mvn test
 ```
 
-## Datos de prueba
+## Registro e inicio de sesión
+
+La pantalla inicial permite crear una cuenta, verificarla, iniciar sesión y cerrarla. En desarrollo el código de verificación se muestra en pantalla, se registra en la bandeja local y en el log del backend. Tras verificar se ofrece registrar una tarjeta o posponerlo. En un despliegue se debe configurar `BIKEGO_MOSTRAR_CODIGO=false` y conectar una implementación real de `NotificadorVerificacion`.
+
+Las cuentas iniciales usan la contraseña `BikeGo123!`; sirven para reproducir los escenarios del plan. Por ejemplo, `laura@correo.com` cubre el camino feliz. La aplicación no permite seleccionar otro usuario: la identidad siempre se obtiene de la sesión.
+
+## Datos iniciales
 
 Las estaciones están en Armenia (Quindío) con coordenadas aproximadas. Si el navegador no está cerca de Armenia, o si se niega el permiso de ubicación, se elige una estación como punto de búsqueda (es lo que pide SWR-01.1).
 
@@ -81,9 +95,7 @@ Las estaciones están en Armenia (Quindío) con coordenadas aproximadas. Si el n
 | U-005 Sofía Marín | Fondos insuficientes |
 | U-006 Mateo Londoño | Segundo usuario válido |
 
-No hay inicio de sesión en este alcance: el usuario de prueba se elige arriba en la pantalla. El botón "Reiniciar demo" deja los datos como al arrancar.
-
-Para probar el QR hay tres caminos: la cámara del celular o del portátil, "Subir imagen" con una foto o captura del código, o "Ingresar ID" (el flujo alterno de SWR-02.1). Los códigos de prueba están en la pantalla "QR de prueba" y en `docs/qr-prueba/`. El contenido de cada código es `BIKEGO:<ID>`, por ejemplo `BIKEGO:BG-001`.
+Para probar el QR hay tres caminos: la cámara, una imagen o el ID impreso (flujo alterno de SWR-02.1). Los códigos están en `docs/qr-prueba/`. Su contenido es `BIKEGO:<ID>`, por ejemplo `BIKEGO:BG-001`.
 
 Para una tarjeta nueva en "Actualizar método de pago" sirve `4111 1111 1111 1111` con un vencimiento futuro. Una tarjeta terminada en `0002` simula fondos insuficientes y un vencimiento pasado simula tarjeta vencida.
 
@@ -114,12 +126,15 @@ Para una tarjeta nueva en "Actualizar método de pago" sirve `4111 1111 1111 111
 | GET | `/api/estaciones` | Estaciones para el selector manual |
 | GET | `/api/bicicletas/cercanas?lat=&lng=&radio=` | Bicicletas disponibles en el radio (1000 a 5000 m) |
 | GET | `/api/bicicletas/{id}?lat=&lng=` | Detalle con revalidación; 409 si ya no está disponible |
-| POST | `/api/alquileres` | Inicia el alquiler: `{usuarioId, bicicletaSeleccionadaId, codigoQr}` |
+| POST | `/api/alquileres` | Inicia el alquiler autenticado: `{bicicletaSeleccionadaId, codigoQr}` |
 | GET | `/api/viajes/{id}` | Estado del viaje en curso |
-| GET | `/api/usuarios` | Usuarios de prueba |
-| PUT | `/api/usuarios/{id}/metodo-pago` | Nueva tarjeta (se tokeniza, solo se guardan los últimos 4 dígitos) |
+| POST | `/api/auth/registro` | Crear una cuenta pendiente de verificación |
+| POST | `/api/auth/verificacion` | Confirmar el código de seis dígitos |
+| POST | `/api/auth/login` | Crear una sesión de 24 horas |
+| GET | `/api/auth/me` | Consultar el perfil autenticado |
+| POST | `/api/auth/logout` | Revocar la sesión actual |
+| PUT | `/api/usuarios/me/metodo-pago` | Nueva tarjeta del usuario autenticado |
 | GET | `/api/config` | Parámetros de negocio vigentes |
-| POST | `/api/demo/reiniciar` | Restaura los datos de prueba |
 
 Los errores de negocio responden con `{codigo, mensaje, accionSugerida}`. Por ejemplo, un pago rechazado devuelve 402 con `accionSugerida: "ACTUALIZAR_METODO_PAGO"`, que el frontend usa para mostrar el formulario de tarjeta sin salir del flujo. En `docs/peticiones.http` hay ejemplos listos para el cliente HTTP de IntelliJ o la extensión REST Client de VS Code.
 
@@ -130,10 +145,84 @@ Están en `backend/src/main/resources/application.properties` con el prefijo `bi
 ## Decisiones y límites del prototipo
 
 - Conflicto entre SWR-02.4 y SWR-02.7: el primero pide ofrecer la actualización del método de pago sin salir del flujo y el segundo aplica un bloqueo temporal tras el rechazo. En v0.3 se decidió que el bloqueo se levanta cuando la pasarela autoriza el nuevo método. Queda registrado en el Plan de Requisitos como pendiente de validar con el cliente.
-- La distancia del viaje en curso es una estimación con velocidad promedio. El seguimiento GPS real y el cierre del viaje hacen parte de F-05.
-- No hay autenticación; el usuario se elige de una lista de prueba.
-- La base de datos es H2 en memoria y se reinicia con cada arranque.
+- La distancia recorrida sigue siendo una estimación. El cierre está implementado: valida GPS del navegador o posición expresamente simulada contra polígonos de prueba de las estaciones, con tolerancia de 30 m. El GPS real de la bicicleta requiere un adaptador IoT.
+- La base local es H2 persistente y admite otra URL mediante `BIKEGO_DB_URL`; para producción se recomienda PostgreSQL con migraciones.
+- El envío de verificación y recibos se entrega a una bandeja local persistente y al log; no utiliza correo por Internet. La interfaz `NotificadorVerificacion` está preparada para un proveedor real de correo o SMS.
 
 ## Capturas
 
 En `docs/capturas/` están las pantallas del prototipo. El mapa de esas capturas es un fondo esquemático porque se tomaron en un entorno sin acceso a las teselas de OpenStreetMap; al correr la aplicación con internet se ve el mapa real.
+
+
+## Roles y cuentas de demostración
+
+| Rol | Correo | Contraseña local |
+|---|---|---|
+| Cliente | `laura@correo.com` | `BikeGo123!` |
+| Operador de flota | `operador@bikego.local` | `BikeGo123!` |
+| Técnico | `tecnico@bikego.local` | `BikeGo123!` |
+
+Los registros públicos siempre crean clientes. Los roles se comprueban en el servidor; ocultar un botón no es la barrera de autorización. Las cuentas de personal se crean al iniciar la aplicación si aún no existen.
+
+## API de cierre, cobro y operaciones
+
+Todas las rutas, salvo zonas, requieren `Authorization: Bearer <token>`.
+
+| Método | Ruta | Uso |
+|---|---|---|
+| POST | `/api/auth/reenviar` | Reenviar código con correo y contraseña |
+| GET | `/api/viajes` | Historial propio, incluyendo viaje activo |
+| GET | `/api/zonas?lat=&lng=` | Zonas ordenadas por distancia, con indicador dentro/fuera |
+| POST | `/api/viajes/{id}/finalizar` | `{latitud, longitud, precision}`; precisión máxima 30 m |
+| POST | `/api/viajes/{id}/pago` | Cobro idempotente o reintento de deuda del viaje |
+| GET | `/api/viajes/{id}/recibo` | Recibo propio y estado del cobro |
+| POST | `/api/usuarios/me/validar-pago` | Validar tarjeta y ausencia de deuda |
+| GET | `/api/usuarios/me/rechazos` | Historial privado de rechazos |
+| GET | `/api/mensajes` | Bandeja privada; el operador recibe además alertas de flota |
+| POST | `/api/incidentes` | `{bicicletaId, tipo, descripcion, latitud, longitud}` |
+| GET | `/api/eventos` | Incidentes propios; personal autorizado ve operaciones de flota |
+| GET | `/api/flota` | Inventario para técnico/operador |
+| POST | `/api/mantenimientos` | Mismo formato que incidente, tipo Preventivo/Correctivo |
+| POST | `/api/mantenimientos/{id}/cerrar` | `{bateria}`; no permite menos de 20 % |
+| POST | `/api/incidentes/{id}/revision` | Operador: `{accion: "REVISAR"}`, `ANULAR` o `COBRAR` |
+
+Los tipos de incidente son `Daño grave`, `Candado bloqueado`, `Batería`, `Accidente` y `Otro`. La descripción requiere entre 10 y 2000 caracteres. No se inicia mantenimiento si la bicicleta tiene un viaje activo. Un incidente grave durante el viaje conserva el estado de mantenimiento después de la devolución.
+
+## Tarifas, deuda y recibos
+
+El costo se calcula con minutos iniciados: base + ceil(segundos / 60) × tarifa por minuto. Una duración estrictamente mayor de cuatro horas activa `conRecargo` y añade `bikego.recargo-largo` (por defecto $10.000; configurable mediante `BIKEGO_RECARGO_LARGO`). Los importes se conservan al cerrar el viaje y no cambian al consultar el historial. Los recibos tienen consecutivo `BG-00000001`, fecha, bicicleta, duración, tarifas, recargo, total y estado.
+
+Un rechazo deja el pago pendiente, registra la deuda una sola vez y aplica el bloqueo temporal. Cambiar a una tarjeta autorizada permite reintentar el cobro desde el recibo; pagar salda esa deuda. Los cobros en revisión se mantienen sin procesar hasta que el operador resuelva el incidente.
+
+## Entorno local y límites
+
+Las pasarelas, candados y correos son simulados: no hay cargos bancarios, bloqueos físicos ni emails externos. Los recibos se entregan en la bandeja de Cuenta y pagos; las alertas aparecen en Centro de flota. Para una instalación real se deben conectar los puertos de pago/IoT/notificación y reemplazar las zonas de prueba por polígonos aprobados. Ver la matriz de trazabilidad para el detalle de cada requisito.
+
+### Vista previa conservada de esta implementación
+
+La vista previa de desarrollo usa `backend/data/bikego-preview.mv.db`; se conservaron las cuentas, sesiones y viajes que estaban en la base temporal. Esta base es independiente de `data/bikego.mv.db`, que sigue siendo la predeterminada. Para retomar los datos de la vista previa:
+
+```bash
+cd backend
+BIKEGO_DB_URL=jdbc:h2:file:./data/bikego-preview mvn spring-boot:run
+```
+
+Los archivos de datos y respaldos están excluidos de Git.
+
+
+## Entrega del Parcial 2
+
+Los entregables de esta revisión se encuentran en `../seguimiento/Parcial 2/`. Incluyen arquitectura C4, plan V4, informe IEEE, Student Book, gestión Jira preparada y un producto ejecutable con interfaz integrada.
+
+Para crear el ejecutable desde fuente:
+
+```bash
+cd frontend
+npm install
+npm run build
+cd ../backend
+mvn test package
+java -jar target/bikego-backend-0.3.0.jar
+```
+
+El JAR incorpora `frontend/dist` como recursos estáticos. Abrir `http://127.0.0.1:8080`. La verificación del Parcial 2 aprobó 50 pruebas JUnit y 19 comprobaciones HTTP sobre el ejecutable integrado. La gestión remota en Jira requiere confirmar acceso y sincronizar las claves del proyecto; los CSV de la entrega no acreditan cambios remotos.

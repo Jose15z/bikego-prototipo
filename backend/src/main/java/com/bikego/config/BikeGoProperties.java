@@ -29,6 +29,12 @@ public class BikeGoProperties {
     private double velocidadPromedioKmh = 15.0;
     /** Autonomia de una bicicleta con 100 % de bateria (km). */
     private double autonomiaMaximaKm = 60.0;
+    private int recargoLargo = 10000;
+    public int getRecargoLargo() { return recargoLargo; }
+    public void setRecargoLargo(int v) { recargoLargo = v; }
+    private int sesionHoras = 24;
+    private int verificacionMinutos = 15;
+    private boolean mostrarCodigoVerificacion = true;
 
     public int getRadioInicialMetros() { return radioInicialMetros; }
     public void setRadioInicialMetros(int v) { this.radioInicialMetros = v; }
@@ -50,4 +56,10 @@ public class BikeGoProperties {
     public void setVelocidadPromedioKmh(double v) { this.velocidadPromedioKmh = v; }
     public double getAutonomiaMaximaKm() { return autonomiaMaximaKm; }
     public void setAutonomiaMaximaKm(double v) { this.autonomiaMaximaKm = v; }
+    public int getSesionHoras() { return sesionHoras; }
+    public void setSesionHoras(int v) { this.sesionHoras = v; }
+    public int getVerificacionMinutos() { return verificacionMinutos; }
+    public void setVerificacionMinutos(int v) { this.verificacionMinutos = v; }
+    public boolean isMostrarCodigoVerificacion() { return mostrarCodigoVerificacion; }
+    public void setMostrarCodigoVerificacion(boolean v) { this.mostrarCodigoVerificacion = v; }
 }

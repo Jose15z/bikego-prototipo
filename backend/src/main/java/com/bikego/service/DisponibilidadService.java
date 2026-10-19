@@ -27,6 +27,7 @@ public class DisponibilidadService {
     /** SWR-01.2, SWR-01.3, SWR-01.5. */
     @Transactional(readOnly = true)
     public BusquedaDto buscarCercanas(double lat, double lng, Integer radioSolicitado) {
+        if (!Double.isFinite(lat) || !Double.isFinite(lng) || Math.abs(lat)>90 || Math.abs(lng)>180) throw new NegocioException(CodigoError.DATOS_INVALIDOS,"Coordenadas inválidas");
         int radio = radioSolicitado == null ? props.getRadioInicialMetros() : radioSolicitado;
         if (radio <= 0 || radio > props.getRadioMaximoMetros()) {
             throw new NegocioException(CodigoError.RADIO_INVALIDO,

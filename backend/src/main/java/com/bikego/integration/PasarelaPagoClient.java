@@ -5,6 +5,9 @@ public interface PasarelaPagoClient {
 
     /** SWR-02.4: consulta si el metodo tokenizado esta vigente y autorizado. */
     ResultadoPago verificar(String tokenPago);
+    default ResultadoPago cobrar(String tokenPago, long monto, String claveIdempotencia) {
+        throw new IllegalStateException("Cobro no configurado");
+    }
 
     /** Tokeniza una tarjeta nueva. La pasarela devuelve un token; el numero completo no se guarda. */
     String tokenizar(String numeroTarjeta, String vencimientoMMAA);

@@ -1,6 +1,8 @@
 package com.bikego;
 
 import com.bikego.config.DataSeeder;
+import com.bikego.service.AutenticacionService;
+import com.bikego.web.dto.LoginRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -22,6 +24,7 @@ class ApiIntegrationTest {
 
     @Autowired MockMvc mvc;
     @Autowired DataSeeder seeder;
+    @Autowired AutenticacionService autenticacion;
 
     @BeforeEach
     void reiniciar() { seeder.cargar(); }
@@ -46,13 +49,17 @@ class ApiIntegrationTest {
     @Test
     @DisplayName("POST /api/alquileres responde 201 en el camino feliz y 402 con accion sugerida si el pago falla")
     void alquileres() throws Exception {
-        mvc.perform(post("/api/alquileres").contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"usuarioId\":\"U-001\",\"bicicletaSeleccionadaId\":\"BG-001\",\"codigoQr\":\"BIKEGO:BG-001\"}"))
+        String tokenLaura = autenticacion.iniciarSesion(new LoginRequest("laura@correo.com", "BikeGo123!")).token();
+        mvc.perform(post("/api/alquileres").header("Authorization", "Bearer " + tokenLaura)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"bicicletaSeleccionadaId\":\"BG-001\",\"codigoQr\":\"BIKEGO:BG-001\"}"))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.estado").value("EN_CURSO"));
 
-        mvc.perform(post("/api/alquileres").contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"usuarioId\":\"U-005\",\"bicicletaSeleccionadaId\":\"BG-004\",\"codigoQr\":\"BIKEGO:BG-004\"}"))
+        String tokenSofia = autenticacion.iniciarSesion(new LoginRequest("sofia@correo.com", "BikeGo123!")).token();
+        mvc.perform(post("/api/alquileres").header("Authorization", "Bearer " + tokenSofia)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"bicicletaSeleccionadaId\":\"BG-004\",\"codigoQr\":\"BIKEGO:BG-004\"}"))
                 .andExpect(status().isPaymentRequired())
                 .andExpect(jsonPath("$.codigo").value("PAGO_RECHAZADO"))
                 .andExpect(jsonPath("$.accionSugerida").value("ACTUALIZAR_METODO_PAGO"));

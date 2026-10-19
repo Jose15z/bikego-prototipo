@@ -10,4 +10,7 @@ public interface CandadoIotClient {
      * Si el candado no responde el futuro nunca se completa y quien llama aplica el timeout.
      */
     CompletableFuture<Boolean> enviarDesbloqueo(String bicicletaId);
+    default CompletableFuture<Boolean> enviarBloqueo(String bicicletaId) {
+        return CompletableFuture.completedFuture(false);
+    }
 }

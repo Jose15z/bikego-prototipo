@@ -12,3 +12,9 @@ frontend/dist/
 .vscode/
 *.iml
 .DS_Store
+
+# Caché incremental de TypeScript
+*.tsbuildinfo
+
+# Datos locales y copias con información de cuentas
+backend/data/

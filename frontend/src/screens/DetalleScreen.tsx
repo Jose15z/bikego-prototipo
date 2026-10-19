@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { api, ApiError, formatoDistancia } from '../api'
+import IncidenteForm from '../components/IncidenteForm'
 import type { Bicicleta, Ubicacion } from '../types'
 
 interface Props {
@@ -70,6 +71,7 @@ export default function DetalleScreen({ bicicletaId, ubicacion, onVolver, onEsca
       <button className="primario grande" onClick={() => onEscanear(bici)}>
         Escanear QR para desbloquear
       </button>
+      <IncidenteForm bicicletaId={bici.id} onEnviado={onVolver} />
     </div>
   )
 }

@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { api, formatoCOP } from '../api'
+import FinalizarViaje from '../components/FinalizarViaje'
+import IncidenteForm from '../components/IncidenteForm'
 import type { Viaje } from '../types'
 
 interface Props {
   viajeInicial: Viaje
+  onFinalizado: (id: number) => void
   recibidoEn: number
 }
 
@@ -16,7 +19,7 @@ const mmss = (s: number) => {
 }
 
 /** SWR-02.8: pantalla Viaje en curso con tiempo, distancia y costo acumulado. */
-export default function ViajeScreen({ viajeInicial, recibidoEn }: Props) {
+export default function ViajeScreen({ viajeInicial, recibidoEn, onFinalizado }: Props) {
   const [viaje, setViaje] = useState(viajeInicial)
   const [segundos, setSegundos] = useState(viajeInicial.segundosTranscurridos)
   const [msRender, setMsRender] = useState<number | null>(null)
@@ -47,7 +50,7 @@ export default function ViajeScreen({ viajeInicial, recibidoEn }: Props) {
 
   return (
     <div className="pantalla">
-      <div className="estado-viaje">Viaje en curso</div>
+      <div className="estado-viaje">{viaje.conIncidente ? 'Viaje con incidente · Cobro en revisión' : 'Viaje en curso'}</div>
       <h1>{viaje.idBicicleta} desbloqueada</h1>
       <p className="sub">Viaje #{viaje.idViaje} · inicio {new Date(viaje.horaInicio).toLocaleTimeString('es-CO')}</p>
 
@@ -69,10 +72,12 @@ export default function ViajeScreen({ viajeInicial, recibidoEn }: Props) {
       <div className="tarjeta">
         <p className="sub">
           Tarifa de prueba: {formatoCOP(viaje.tarifaBase)} base + {formatoCOP(viaje.tarifaMinuto)} por minuto.
-          La distancia es una estimación del prototipo; el seguimiento GPS real hace parte de F-05.
+          La distancia es estimada. Al finalizar se valida la ubicación de devolución.
         </p>
       </div>
-      {msRender !== null && <p className="metrica">Pantalla mostrada {msRender} ms después de la confirmación del candado (meta 2000 ms, SWR-02.8)</p>}
+      <FinalizarViaje id={viaje.idViaje} onFinalizado={onFinalizado} />
+      <IncidenteForm bicicletaId={viaje.idBicicleta} />
+      {msRender !== null && <p className="metrica">Pantalla mostrada {msRender} ms después de la confirmación del candado</p>}
     </div>
   )
 }

@@ -1,5 +1,6 @@
 package com.bikego.integration;
 
+import com.bikego.config.BikeGoProperties;
 import com.bikego.repository.BicicletaRepository;
 import org.springframework.stereotype.Component;
 
@@ -14,9 +15,11 @@ import java.util.concurrent.TimeUnit;
 public class CandadoIotSimulado implements CandadoIotClient {
 
     private final BicicletaRepository bicicletas;
+    private final BikeGoProperties props;
 
-    public CandadoIotSimulado(BicicletaRepository bicicletas) {
+    public CandadoIotSimulado(BicicletaRepository bicicletas, BikeGoProperties props) {
         this.bicicletas = bicicletas;
+        this.props = props;
     }
 
     @Override
@@ -25,7 +28,10 @@ public class CandadoIotSimulado implements CandadoIotClient {
         if (falla) {
             return new CompletableFuture<>();
         }
+        long demora = Math.min(600, Math.max(1, props.getIotTimeoutMs() / 2));
         return CompletableFuture.supplyAsync(() -> Boolean.TRUE,
-                CompletableFuture.delayedExecutor(600, TimeUnit.MILLISECONDS));
+                CompletableFuture.delayedExecutor(demora, TimeUnit.MILLISECONDS));
     }
+    @Override
+    public CompletableFuture<Boolean> enviarBloqueo(String bicicletaId) { return enviarDesbloqueo(bicicletaId); }
 }

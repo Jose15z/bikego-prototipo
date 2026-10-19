@@ -2,12 +2,11 @@ import { useState, type FormEvent } from 'react'
 import { api, ApiError } from '../api'
 
 interface Props {
-  usuarioId: string
   onGuardado: () => void
 }
 
 /** SWR-02.4 flujo alterno 1: actualizar el metodo de pago sin salir del flujo. */
-export default function MetodoPagoForm({ usuarioId, onGuardado }: Props) {
+export default function MetodoPagoForm({ onGuardado }: Props) {
   const [numero, setNumero] = useState('')
   const [vencimiento, setVencimiento] = useState('')
   const [titular, setTitular] = useState('')
@@ -19,7 +18,7 @@ export default function MetodoPagoForm({ usuarioId, onGuardado }: Props) {
     setGuardando(true)
     setError(null)
     try {
-      await api.actualizarMetodoPago(usuarioId, numero, vencimiento, titular)
+      await api.actualizarMetodoPago(numero, vencimiento, titular)
       onGuardado()
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'No fue posible guardar la tarjeta')

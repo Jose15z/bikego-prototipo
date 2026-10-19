@@ -35,6 +35,7 @@ input, select { font: inherit; }
 }
 .marca { display: flex; gap: 8px; align-items: center; background: none; border: 0; font-weight: 700; font-size: 18px; color: var(--verde); padding: 0; }
 .barra-acciones { display: flex; gap: 12px; }
+.perfil-cabecera { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--gris); }
 .enlace { background: none; border: 0; color: var(--verde); padding: 0; font-size: 14px; }
 .volver { margin-bottom: 4px; }
 
@@ -122,3 +123,108 @@ h3 { font-size: 15px; margin: 0 0 8px; }
 
 .toast { position: fixed; top: 12px; left: 50%; transform: translateX(-50%); background: var(--tinta); color: #fff; padding: 8px 14px; border-radius: 8px; font-size: 13px; z-index: 1000; }
 .pie { padding: 10px 16px; font-size: 11.5px; color: var(--gris); text-align: center; }
+
+.auth-contenedor { width: 100%; max-width: 420px; min-height: 100vh; padding: 30px 18px; background: var(--fondo); }
+.auth-marca { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--verde); font-size: 25px; margin-bottom: 24px; }
+.auth-tarjeta { display: flex; flex-direction: column; gap: 10px; background: #fff; border: 1px solid var(--borde); border-radius: 16px; padding: 22px; box-shadow: 0 8px 30px rgba(29,42,38,.07); }
+.auth-tarjeta > label { display: flex; flex-direction: column; gap: 5px; color: var(--gris); font-size: 13px; }
+.auth-tarjeta input { width: 100%; padding: 10px 11px; border: 1px solid var(--borde); border-radius: 9px; background: #fff; }
+.auth-tarjeta .aceptacion { flex-direction: row; align-items: flex-start; color: var(--tinta); line-height: 1.35; }
+.auth-tarjeta .aceptacion input { width: auto; margin-top: 2px; }
+.error-texto { color: var(--rojo); background: var(--rojo-claro); border-radius: 8px; padding: 9px; margin: 0; font-size: 13px; }
+.codigo-dev { background: var(--ambar-claro); padding: 10px; border-radius: 8px; font-size: 13px; margin: 0; }
+
+/* BikeGo — interfaz adaptable para escritorio y móvil. */
+:root { --verde:#195443; --verde-claro:#eaf2e6; --tinta:#243c32; --gris:#708077; --borde:#e0e5dc; --fondo:#f7f8f2; background:var(--fondo); font-family:'Avenir Next','Segoe UI',sans-serif; }
+body { display:block; }
+#root { width:100%; min-height:100vh; }
+button,input,select,textarea { font:inherit; }
+button { transition:background .15s,transform .15s; }
+button:disabled { cursor:not-allowed; opacity:.55; }
+button:focus-visible, input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible { outline:3px solid #84b951;outline-offset:3px; }
+button.primario:hover:not(:disabled) { background:#103b2e;transform:translateY(-1px); }
+label { display:flex;flex-direction:column;gap:7px;font-size:13px; }
+input,select,textarea { width:100%;min-width:0;padding:12px 14px;border:1px solid var(--borde);border-radius:10px;background:white;color:var(--tinta); }
+textarea { min-height:110px;resize:vertical; }
+small { line-height:1.5; }
+h1 { font-size:32px;letter-spacing:-1.3px;line-height:1.18; }
+h2 { font-size:20px;letter-spacing:-.5px; }
+h3 { font-size:15px; }
+hr { border:0;border-top:1px solid var(--borde);width:100%;margin:14px 0; }
+.sub { font-size:14px;line-height:1.65; }
+.eyebrow { font-size:10px;letter-spacing:2px;font-weight:750;color:var(--gris);margin:0 0 13px; }
+.app-layout { display:grid;grid-template-columns:235px minmax(0,1fr);min-height:100vh; }
+.sidebar { background:#153e32;color:#e9f0e5;padding:36px 24px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh; }
+.sidebar .marca { color:white;font-size:29px;gap:8px;letter-spacing:-1px; }
+.marca img { width:34px;height:34px; }
+.sidebar .marca img,.auth-marca img { filter:brightness(0) invert(1); }
+.marca-punto,.auth-marca strong span { color:#c4ed8d; }
+.sidebar-sub { color:#9cb4a6;font-size:12px;margin:10px 0 40px; }
+.sidebar nav { display:flex;flex-direction:column;gap:8px; }
+.nav-item { color:#b9c9be;text-align:left;display:flex;align-items:center;gap:12px;border:0;border-radius:10px;padding:13px 14px;background:none;font-size:13px; }
+.nav-item span { font-size:19px;width:22px; }
+.nav-item:hover { background:#204b3d; }
+.nav-item.activo { background:#ceefa5;color:#183e2e;font-weight:700; }
+.sidebar-note { margin:auto 0 38px;padding:26px 10px 0;overflow:hidden; }
+.sidebar-note > span { font-size:17px;line-height:1.5;letter-spacing:2px;font-weight:700;color:#c4dfb1; }
+.sidebar-note p { font-size:12px;color:#a5b6aa;line-height:1.6; }
+.linea-ruta { width:130px;height:48px;border:2px dashed #75997c;border-radius:50%;transform:rotate(-20deg);margin:25px 0 0; }
+.sidebar-profile { border-top:1px solid #3b5a4d;padding-top:20px;display:flex;align-items:center;gap:9px; }
+.sidebar-profile strong { font-size:12px; }.sidebar-profile small { display:block;font-size:9px;color:#a5b6aa; }.sidebar-profile .enlace { color:#c5d5bd;margin-left:auto;font-size:11px; }
+.avatar { border:0;width:36px;height:36px;border-radius:50%;background:#e4edcf;color:#30533b;display:inline-flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0; }
+.telefono { max-width:none;box-shadow:none;min-width:0; }
+.barra { padding:21px 40px;background:var(--fondo);gap:20px; }
+.ubicacion-ciudad { font-size:12px;display:flex;align-items:center;gap:9px; }
+.punto-verde { width:7px;height:7px;border-radius:50%;background:#4f7f42; }
+.barra-lema { margin-left:auto;font-size:12px;color:var(--gris); }
+.contenido { width:100%;max-width:1250px;margin:0 auto;padding:32px 40px; }
+.pantalla { gap:20px; }
+.bienvenida { display:flex;justify-content:space-between;align-items:center;padding:4px 0 32px;margin-bottom:28px;border-bottom:1px solid var(--borde); }
+.bienvenida h1 { font-size:40px;letter-spacing:-1.8px;font-weight:650; }
+.bienvenida p:not(.eyebrow) { color:var(--gris);font-size:14px;margin:15px 0 0; }
+.saludo-punto { color:#83a94b; }
+.bienvenida-sello { width:142px;height:142px;border:1px solid #d9dfca;border-radius:50%;background:#f0f3e4;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:13px;color:#5b754d;transform:rotate(8deg);flex-shrink:0; }
+.bienvenida-sello span { font-size:32px;font-weight:650;letter-spacing:-2px; }.bienvenida-sello small { font-size:8px;margin-top:7px; }
+.bienvenida + .pantalla > h1 { font-size:23px; }
+.tarjeta,.formulario { border-radius:16px;padding:23px;gap:13px;box-shadow:0 3px 10px #2b392304; }
+.tarjeta input,.tarjeta select,.formulario input { padding:12px 14px; }
+.primario,.secundario { padding:12px 18px;border-radius:10px;font-size:13px; }
+.primario.grande { padding:16px;font-size:14px; }
+.mapa { height:360px;border-radius:18px; }
+.controles { flex-direction:row;align-items:center;justify-content:space-between;gap:20px; }
+.chips { min-width:310px;gap:8px; }.chip { padding:10px 14px;font-size:12px; }
+.lista { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px; }
+.fila { padding:20px 16px;grid-template-columns:60px 1fr auto;gap:12px;min-height:88px;border-radius:14px; }.fila:hover { background:#eff4e8;border-color:#a3b899; }.fila-id { font-size:13px; }.fila-info { font-size:12px;line-height:1.6; }.bateria { font-size:13px; }
+.indicador { padding:24px 12px;border-radius:16px;gap:8px; }.indicador .valor { font-size:30px;letter-spacing:-1px; }.indicador .rotulo { font-size:12px; }
+.cuenta-grid { display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start; }.grande-avatar { width:56px;height:56px;font-size:23px; }
+.actividad { display:flex;justify-content:space-between;gap:18px;border-bottom:1px solid var(--borde);padding:12px 0;font-size:12px; }.actividad small { color:var(--gris); }
+.flota-lista { max-height:340px;overflow:auto; }
+.acciones { display:flex;gap:10px;align-items:end;flex-wrap:wrap; }.acciones input { max-width:150px; }
+.viaje-fila { display:flex;align-items:center;gap:20px;width:100%;padding:22px;border:1px solid var(--borde);border-radius:14px;background:white;text-align:left;color:var(--tinta); }.viaje-fila:hover { background:#eff4e8; }.viaje-fila small { display:block;font-size:12px;color:var(--gris);margin-top:7px; }.viaje-icono { background:#e9efdf;border-radius:12px;padding:13px 18px;font-size:25px; }.viaje-total { margin-left:auto;text-align:right; }
+.banner-viaje { width:100%;display:flex;justify-content:space-between;gap:12px;padding:17px 22px;border:1px solid #c7daac;background:#e7f0d8;color:var(--verde);border-radius:12px;margin-bottom:24px;font-size:13px; }
+.recibo { max-width:650px;margin:0 auto; }.recibo-papel { padding:32px;gap:24px; }.recibo-total { font-size:48px;letter-spacing:-2px;margin-top:14px; }.recibo .estado-ok { align-self:start; }.recibo .datos { padding:24px 0;border-top:1px dashed var(--borde);border-bottom:1px dashed var(--borde);row-gap:18px; }
+summary { cursor:pointer;color:var(--verde);font-size:12px;padding:8px 0; }details p { font-size:12px;line-height:1.7;color:var(--gris); }details label { margin-top:12px; }
+.reporte .formulario { margin-top:15px; }.metrica { color:#819085;font-size:10px; }.pie { display:flex;justify-content:space-between;gap:15px;margin:10px 40px 0;padding:24px 0;border-top:1px solid var(--borde);font-size:10px; }
+.carga { padding-top:25vh!important; }
+.auth-layout { display:grid;grid-template-columns:46% 54%;min-height:100vh; }
+.auth-story { padding:45px 9% 34px;background:#174636;color:#f0f4e7;display:flex;flex-direction:column;overflow:hidden; }
+.auth-marca { color:white;justify-content:flex-start;margin:0 0 50px;font-size:32px;letter-spacing:-1px; }.auth-marca img { width:38px;height:38px; }
+.auth-pill { color:#c4d8b4;font-size:9px;letter-spacing:2px;border:1px solid #587359;padding:10px 14px;border-radius:30px;align-self:start; }
+.auth-story h1 { font-size:clamp(40px,4.6vw,74px);letter-spacing:-3px;font-weight:550;line-height:1.07;margin:26px 0 22px; }.auth-story em { color:#d1eea0;font-family:Georgia,serif;font-weight:400; }
+.auth-story > p { color:#b1c5b4;font-size:14px;line-height:1.9;margin:0; }
+.bike-art { margin:35px -14px 28px; }.bike-art svg { width:100%;max-height:290px; }.art-caption { display:block;text-align:center;font-size:7px;letter-spacing:2px;color:#b2c7a9;margin-top:16px; }
+.auth-steps { display:flex;justify-content:space-between;border-top:1px solid #456850;padding-top:24px;gap:12px;margin-top:auto;font-size:11px; }.auth-steps b { color:#c2e89b;margin-right:6px;font-size:10px; }.auth-story > small { color:#91ad96;font-size:9px;margin-top:35px; }
+.auth-contenedor { max-width:none;background:#fbfbf7;padding:40px 11%;display:flex;flex-direction:column;min-width:0; }
+.auth-topline { font-size:9px;letter-spacing:1.8px;color:#7d8b7b;display:flex;justify-content:space-between; }.auth-topline span { font-size:16px; }
+.auth-panel { width:100%;max-width:470px;margin:auto; padding:40px 0; }
+.auth-tabs { display:flex;gap:26px;border-bottom:1px solid var(--borde);margin-bottom:36px; }.auth-tabs button { border:0;border-bottom:2px solid transparent;background:none;padding:14px 0;color:var(--gris);font-size:12px; }.auth-tabs .activo { color:var(--verde);border-color:var(--verde);font-weight:700; }
+.auth-tarjeta { padding:0;background:none;border:0;box-shadow:none;gap:19px; }.auth-tarjeta h1 { font-size:35px;font-weight:600;letter-spacing:-1.4px; }.auth-tarjeta .eyebrow { margin:0;font-size:9px; }.auth-tarjeta .sub { font-size:12px;margin-bottom:10px; }.auth-tarjeta label { color:#44584a;font-size:12px; }.auth-tarjeta input { border-radius:8px;padding:13px 14px;min-height:46px;font-size:13px; }.auth-tarjeta .primario { margin-top:9px; }
+.password-field { position:relative; }.password-field input { padding-right:72px; }.password-field button { position:absolute;right:12px;top:15px;padding:0;border:0;background:none;font-size:10px;color:var(--gris); }
+.auth-switch { font-size:11px;text-align:center;color:var(--gris); }.auth-switch button { font-size:11px;font-weight:650; }.auth-footer { font-size:10px;text-align:center;color:#85907e;margin:0; }
+.registro-grid { display:grid;grid-template-columns:1fr 1fr;gap:14px; }.registro-grid .ancho { grid-column:1/-1; }.auth-tarjeta .aceptacion { font-size:11px;align-items:center; }.auth-tarjeta .aceptacion input { min-height:auto;flex-shrink:0; }.terminos { border-top:1px solid var(--borde); }.codigo-input { text-align:center;font-size:26px!important;letter-spacing:10px; }.aviso-global { position:fixed;bottom:15px;left:50%;transform:translateX(-50%);padding:16px;background:#fff4d6;border:1px solid #ddce92;border-radius:12px;z-index:1000;max-width:90vw; }
+@media(min-width:1500px) { .auth-story { padding-left:14%;padding-right:14%; }.auth-story h1 { margin-top:45px; }.bike-art { margin-top:50px; } }
+@media(max-width:1050px) { .app-layout { grid-template-columns:195px minmax(0,1fr); }.sidebar { padding:28px 16px; }.contenido { padding:28px; }.barra { padding:20px 28px; }.bienvenida h1 { font-size:33px; }.bienvenida-sello { width:112px;height:112px; }.lista { grid-template-columns:1fr; }.auth-contenedor { padding:30px 8%; }.auth-story { padding:35px 8%; }.auth-story h1 { font-size:52px; }.auth-tarjeta h1 { font-size:30px; }.controles { flex-wrap:wrap; }.chips { min-width:0;flex:1; } }
+@media(max-width:760px) { .app-layout { display:block;padding-bottom:72px; }.sidebar { position:static;height:auto;padding:18px 20px;flex-direction:row;align-items:center;justify-content:space-between; }.sidebar .marca { font-size:24px; }.sidebar .marca img { width:28px;height:28px; }.sidebar-sub,.sidebar-note { display:none; }.sidebar-profile { padding:0;border:0; }.sidebar-profile > div,.sidebar-profile .avatar { display:none; }.sidebar-profile .enlace { font-size:13px; }.sidebar nav { position:fixed;bottom:0;left:0;right:0;z-index:1100;flex-direction:row;background:#153e32;padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:5px;justify-content:space-evenly;border-top:1px solid #45634f; }.nav-item { flex:1;justify-content:center;flex-direction:column;padding:7px 4px;gap:2px;font-size:10px;border-radius:8px; }.nav-item span { font-size:18px;text-align:center; }.barra { padding:14px 20px; }.barra-lema { font-size:10px; }.barra .avatar { display:none; }.contenido { padding:24px 20px; }.bienvenida { gap:10px;padding-bottom:24px;margin-bottom:24px; }.bienvenida h1 { font-size:30px; }.bienvenida p:not(.eyebrow) { font-size:12px;max-width:220px; }.bienvenida-sello { width:90px;height:90px;font-size:10px; }.bienvenida-sello span { font-size:24px; }.bienvenida-sello small { font-size:6px; }.eyebrow { font-size:8px;letter-spacing:1.5px; }.mapa { height:310px; }.controles { flex-direction:column;gap:12px;align-items:stretch; }.chips { width:100%; }.chip { padding:9px 4px; }.cuenta-grid { grid-template-columns:1fr; }.tarjeta,.formulario { padding:20px; }.indicador { padding:18px 5px; }.indicador .valor { font-size:21px; }.indicador .rotulo { font-size:10px; }.pie { margin:0 20px;font-size:9px; }.pie span:last-child { display:none; }.viaje-fila { padding:16px;gap:12px;font-size:13px; }.viaje-icono { padding:10px; }.viaje-fila small { font-size:10px; }.banner-viaje { padding:14px;font-size:11px; }.auth-layout { grid-template-columns:1fr; }.auth-story { padding:26px 26px 30px; }.auth-marca { margin-bottom:25px;font-size:26px; }.auth-marca img { width:30px;height:30px; }.auth-pill { display:none; }.auth-story h1 { font-size:42px;letter-spacing:-2px;margin:0 0 16px; }.auth-story > p { font-size:12px; }.bike-art,.auth-steps,.auth-story > small { display:none; }.auth-contenedor { min-height:auto;padding:26px; }.auth-panel { padding:16px 0 24px; }.auth-topline { display:none; }.auth-tabs { margin-bottom:26px; }.auth-tarjeta h1 { font-size:28px; }.auth-tarjeta { gap:17px; }h1 { font-size:28px; }.datos dt,.datos dd { font-size:12px; }.recibo-papel { padding:24px; }.recibo-total { font-size:40px; } }
+@media(prefers-reduced-motion:reduce) { * { animation-duration:.01ms!important;transition:none!important; } }
+@media print { .sidebar,.barra,.pie,.no-imprimir,.banner-viaje { display:none!important; }.app-layout { display:block; }.contenido { padding:0; }.recibo button { display:none; }.recibo-papel { border:0; }.recibo { max-width:none; } }
+.mensaje-contenido { font:inherit;font-size:13px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--fondo);padding:18px;border-radius:10px; }

@@ -1,35 +1,44 @@
-### F-01 bicicletas cercanas a la Plaza de Bolivar (radio inicial 1 km)
+@token = PEGAR_TOKEN_DEL_LOGIN
+
+### F-03 registrar usuario
+POST http://localhost:8080/api/auth/registro
+Content-Type: application/json
+
+{"nombre":"Ana Torres","documento":"1094000999","correo":"ana@correo.com","telefono":"+57 3001234567","fechaNacimiento":"2000-04-08","direccion":"Carrera 10 # 20-30","password":"ClaveSegura123","aceptaTerminos":true}
+
+### F-03 verificar cuenta (usar el codigo mostrado en desarrollo)
+POST http://localhost:8080/api/auth/verificacion
+Content-Type: application/json
+
+{"correo":"ana@correo.com","codigo":"000000"}
+
+### Iniciar sesion con la cuenta inicial de camino feliz
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{"correo":"laura@correo.com","password":"BikeGo123!"}
+
+### Perfil autenticado
+GET http://localhost:8080/api/auth/me
+Authorization: Bearer {{token}}
+
+### F-01 bicicletas cercanas a la Plaza de Bolivar
 GET http://localhost:8080/api/bicicletas/cercanas?lat=4.53389&lng=-75.68111
 
-### F-01 radio ampliado a 5 km
-GET http://localhost:8080/api/bicicletas/cercanas?lat=4.53389&lng=-75.68111&radio=5000
-
-### F-01 detalle con revalidacion (BG-005 esta en uso: 409)
-GET http://localhost:8080/api/bicicletas/BG-005
-
-### F-02 camino feliz
+### F-02 camino feliz (la identidad sale de la sesion)
 POST http://localhost:8080/api/alquileres
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
-{"usuarioId": "U-001", "bicicletaSeleccionadaId": "BG-001", "codigoQr": "BIKEGO:BG-001"}
+{"bicicletaSeleccionadaId":"BG-001","codigoQr":"BIKEGO:BG-001"}
 
-### F-02 pago rechazado (tarjeta vencida)
-POST http://localhost:8080/api/alquileres
+### Actualizar metodo de pago del usuario autenticado
+PUT http://localhost:8080/api/usuarios/me/metodo-pago
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
-{"usuarioId": "U-003", "bicicletaSeleccionadaId": "BG-004", "codigoQr": "BIKEGO:BG-004"}
+{"numeroTarjeta":"4111 1111 1111 1111","vencimiento":"12/29","titular":"Laura Gómez"}
 
-### F-02 actualizar metodo de pago
-PUT http://localhost:8080/api/usuarios/U-003/metodo-pago
-Content-Type: application/json
-
-{"numeroTarjeta": "4111 1111 1111 1111", "vencimiento": "12/29", "titular": "Valentina Ríos"}
-
-### F-02 candado sin respuesta (tarda unos 15 s: 3 intentos de 5 s)
-POST http://localhost:8080/api/alquileres
-Content-Type: application/json
-
-{"usuarioId": "U-006", "bicicletaSeleccionadaId": "BG-008", "codigoQr": "BIKEGO:BG-008"}
-
-### Reiniciar datos de prueba
-POST http://localhost:8080/api/demo/reiniciar
+### Cerrar sesion
+POST http://localhost:8080/api/auth/logout
+Authorization: Bearer {{token}}

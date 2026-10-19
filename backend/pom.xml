@@ -15,7 +15,7 @@
     <artifactId>bikego-backend</artifactId>
     <version>0.3.0</version>
     <name>bikego-backend</name>
-    <description>Prototipo BikeGo: F-01 Consultar bicicletas disponibles cercanas y F-02 Iniciar alquiler mediante codigo QR</description>
+    <description>BikeGo Parcial 2: ocho funcionalidades y 42 requisitos con interfaz web integrada</description>
 
     <properties>
         <java.version>17</java.version>
@@ -47,6 +47,13 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource><directory>src/main/resources</directory></resource>
+            <resource>
+                <directory>../frontend/dist</directory>
+                <targetPath>static</targetPath>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

@@ -46,6 +46,12 @@ public class Bicicleta {
     }
 
     public void marcarEnUso() { this.estado = EstadoBicicleta.EN_USO; }
+    public void mantenimiento() { estado = EstadoBicicleta.EN_MANTENIMIENTO; }
+    public void habilitar(int bateria) { this.bateria = bateria; estado = EstadoBicicleta.DISPONIBLE; }
+    public void devolver(Estacion estacion, double lat, double lng) {
+        this.estacion = estacion; latitud = lat; longitud = lng;
+        if (estado != EstadoBicicleta.EN_MANTENIMIENTO) estado = EstadoBicicleta.DISPONIBLE;
+    }
 
     public String getId() { return id; }
     public EstadoBicicleta getEstado() { return estado; }

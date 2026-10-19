@@ -29,6 +29,17 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(new ErrorDto(CodigoError.DATOS_INVALIDOS.name(), detalle, null));
     }
 
+    @ExceptionHandler({org.springframework.http.converter.HttpMessageNotReadableException.class,
+        org.springframework.web.method.annotation.MethodArgumentTypeMismatchException.class})
+    public ResponseEntity<ErrorDto> formato(Exception e) {
+        return ResponseEntity.badRequest().body(new ErrorDto("DATOS_INVALIDOS","Verifica el formato de los datos enviados",null));
+    }
+
+    @ExceptionHandler(org.springframework.dao.DataIntegrityViolationException.class)
+    public ResponseEntity<ErrorDto> duplicado(Exception e) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(new ErrorDto("DATOS_DUPLICADOS","El correo o documento ya está registrado",null));
+    }
+
     /** Otro usuario tiene tomada la bicicleta en este momento (CA-7). */
     @ExceptionHandler(ConcurrencyFailureException.class)
     public ResponseEntity<ErrorDto> bloqueo(ConcurrencyFailureException e) {

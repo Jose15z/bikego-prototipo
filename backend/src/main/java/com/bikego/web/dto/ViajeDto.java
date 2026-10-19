@@ -14,4 +14,4 @@ public record ViajeDto(
         long costoAcumulado,
         int tarifaBase,
         int tarifaMinuto,
-        double velocidadPromedioKmh) { }
+        double velocidadPromedioKmh, boolean conIncidente) { }

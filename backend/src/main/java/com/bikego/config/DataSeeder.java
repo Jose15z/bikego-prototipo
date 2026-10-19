@@ -8,8 +8,10 @@ import com.bikego.domain.Usuario;
 import com.bikego.repository.BicicletaRepository;
 import com.bikego.repository.EstacionRepository;
 import com.bikego.repository.RechazoPagoRepository;
+import com.bikego.repository.SesionRepository;
 import com.bikego.repository.UsuarioRepository;
 import com.bikego.repository.ViajeRepository;
+import com.bikego.service.SeguridadHash;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -25,29 +27,34 @@ import static com.bikego.domain.EstadoBicicleta.EN_USO;
  */
 @Component
 public class DataSeeder implements ApplicationRunner {
+    private static final String PASSWORD_INICIAL_HASH = SeguridadHash.password("BikeGo123!");
 
     private final EstacionRepository estaciones;
     private final BicicletaRepository bicicletas;
     private final UsuarioRepository usuarios;
     private final ViajeRepository viajes;
     private final RechazoPagoRepository rechazos;
+    private final SesionRepository sesiones;
 
     public DataSeeder(EstacionRepository estaciones, BicicletaRepository bicicletas, UsuarioRepository usuarios,
-                      ViajeRepository viajes, RechazoPagoRepository rechazos) {
+                      ViajeRepository viajes, RechazoPagoRepository rechazos, SesionRepository sesiones) {
         this.estaciones = estaciones;
         this.bicicletas = bicicletas;
         this.usuarios = usuarios;
         this.viajes = viajes;
         this.rechazos = rechazos;
+        this.sesiones = sesiones;
     }
 
     @Override
     public void run(ApplicationArguments args) {
-        cargar();
+        if (estaciones.count() == 0) cargar();
+        crearPersonal();
     }
 
     @Transactional
     public void cargar() {
+        sesiones.deleteAllInBatch();
         viajes.deleteAllInBatch();
         rechazos.deleteAllInBatch();
         bicicletas.deleteAllInBatch();
@@ -74,18 +81,36 @@ public class DataSeeder implements ApplicationRunner {
         bici("BG-011", DISPONIBLE, 19, terminal, -0.00010, 0.00008, false);    // 19 %: oculta
         bici("BG-012", EN_MANTENIMIENTO, 50, vida, -0.00016, 0.00014, false);
 
-        usuarios.save(new Usuario("U-001", "Laura Gómez", "laura@correo.com", EstadoCuenta.ACTIVA, 0,
-                "tok_ok_4242", "Visa", "4242", "Cuenta activa, sin deuda y tarjeta vigente (camino feliz)"));
-        usuarios.save(new Usuario("U-002", "Carlos Pérez", "carlos@correo.com", EstadoCuenta.ACTIVA, 8500,
-                "tok_ok_5100", "Mastercard", "5100", "Deuda pendiente de $8.500 (RN-001)"));
-        usuarios.save(new Usuario("U-003", "Valentina Ríos", "valentina@correo.com", EstadoCuenta.ACTIVA, 0,
-                "tok_vencida_1881", "Visa", "1881", "Tarjeta vencida: la pasarela rechaza (RN-008)"));
-        usuarios.save(new Usuario("U-004", "Andrés Castaño", "andres@correo.com", EstadoCuenta.SUSPENDIDA, 0,
-                "tok_ok_3005", "Visa", "3005", "Cuenta suspendida"));
-        usuarios.save(new Usuario("U-005", "Sofía Marín", "sofia@correo.com", EstadoCuenta.ACTIVA, 0,
-                "tok_fondos_0002", "Visa", "0002", "Fondos insuficientes en la pasarela"));
-        usuarios.save(new Usuario("U-006", "Mateo Londoño", "mateo@correo.com", EstadoCuenta.ACTIVA, 0,
-                "tok_ok_7777", "Mastercard", "7777", "Segundo usuario válido (prueba de concurrencia)"));
+        usuario("U-001", "10000001", "Laura Gómez", "laura@correo.com", EstadoCuenta.ACTIVA, 0,
+                "tok_ok_4242", "Visa", "4242", "Cuenta activa, sin deuda y tarjeta vigente");
+        usuario("U-002", "10000002", "Carlos Pérez", "carlos@correo.com", EstadoCuenta.ACTIVA, 8500,
+                "tok_ok_5100", "Mastercard", "5100", "Deuda pendiente de $8.500 (RN-001)");
+        usuario("U-003", "10000003", "Valentina Ríos", "valentina@correo.com", EstadoCuenta.ACTIVA, 0,
+                "tok_vencida_1881", "Visa", "1881", "Tarjeta vencida: la pasarela rechaza (RN-008)");
+        usuario("U-004", "10000004", "Andrés Castaño", "andres@correo.com", EstadoCuenta.SUSPENDIDA, 0,
+                "tok_ok_3005", "Visa", "3005", "Cuenta suspendida");
+        usuario("U-005", "10000005", "Sofía Marín", "sofia@correo.com", EstadoCuenta.ACTIVA, 0,
+                "tok_fondos_0002", "Visa", "0002", "Fondos insuficientes en la pasarela");
+        usuario("U-006", "10000006", "Mateo Londoño", "mateo@correo.com", EstadoCuenta.ACTIVA, 0,
+                "tok_ok_7777", "Mastercard", "7777", "Segundo usuario válido");
+    }
+
+    private void crearPersonal() {
+        if (!usuarios.existsById("STAFF-01")) {
+            Usuario u = new Usuario("STAFF-01", "Operador BikeGo", "operador@bikego.local", EstadoCuenta.ACTIVA, 0, null, null, null, "Operación local de flota");
+            u.configurarCredenciales("90000001", PASSWORD_INICIAL_HASH); u.asignarRol("OPERADOR"); usuarios.save(u);
+        }
+        if (!usuarios.existsById("STAFF-02")) {
+            Usuario u = new Usuario("STAFF-02", "Técnico BikeGo", "tecnico@bikego.local", EstadoCuenta.ACTIVA, 0, null, null, null, "Mantenimiento local");
+            u.configurarCredenciales("90000002", PASSWORD_INICIAL_HASH); u.asignarRol("TECNICO"); usuarios.save(u);
+        }
+    }
+
+    private void usuario(String id, String documento, String nombre, String correo, EstadoCuenta estado, int deuda,
+                         String token, String marca, String ultimos4, String escenario) {
+        Usuario usuario = new Usuario(id, nombre, correo, estado, deuda, token, marca, ultimos4, escenario);
+        usuario.configurarCredenciales(documento, PASSWORD_INICIAL_HASH);
+        usuarios.save(usuario);
     }
 
     private void bici(String id, EstadoBicicleta estado, int bateria, Estacion est,
