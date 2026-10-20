@@ -41,7 +41,7 @@ class OperacionIntegrationTest {
     @SpyBean PasarelaPagoSimulada pasarela;
     private Instant instante;
     private Usuario operador;
-    private final PosicionRequest plaza = new PosicionRequest(4.53389,-75.68111,5.0);
+    private final PosicionRequest plaza = new PosicionRequest(4.5325,-75.6736,5.0);
 
     @BeforeEach void preparar() {
         instante=Instant.parse("2026-10-17T15:00:00Z");
@@ -54,7 +54,7 @@ class OperacionIntegrationTest {
     }
     private long iniciar() {return alquiler.iniciar("U-001","BG-001","BIKEGO:BG-001").idViaje();}
     private void avanzar(long minutos) {instante=instante.plusSeconds(minutos*60);}
-    private OperacionRequest reporte(String tipo) {return new OperacionRequest("BG-001",tipo,"El freno delantero está averiado",4.53389,-75.68111);}
+    private OperacionRequest reporte(String tipo) {return new OperacionRequest("BG-001",tipo,"El freno delantero está averiado",4.5325,-75.6736);}
 
     @Test void finalizaCongelaCostoYNoCobraDosVeces() {
         long id=iniciar();avanzar(10);
@@ -88,8 +88,8 @@ class OperacionIntegrationTest {
         assertThat(alquiler.consultarViaje(id).estado()).isEqualTo("EN_CURSO");
     }
     @Test void toleranciaDeZonaNoExcede30MetrosDelBorde() {
-        assertThat(operaciones.zonas(4.53389+49.0/111320,-75.68111).get(0).dentro()).isTrue();
-        assertThat(operaciones.zonas(4.53389+51.0/111320,-75.68111).get(0).dentro()).isFalse();
+        assertThat(operaciones.zonas(4.5325+49.0/111320,-75.6736).get(0).dentro()).isTrue();
+        assertThat(operaciones.zonas(4.5325+51.0/111320,-75.6736).get(0).dentro()).isFalse();
     }
     @Test void fallaCandadoMantieneViajeYNotifica() {
         long id=iniciar();when(candado.enviarBloqueo(anyString())).thenAnswer(i -> new CompletableFuture<Boolean>());
@@ -117,7 +117,7 @@ class OperacionIntegrationTest {
         long id=iniciar();String token=auth.iniciarSesion(new LoginRequest("laura@correo.com","BikeGo123!")).token();
         mvc.perform(get("/api/flota").header("Authorization","Bearer "+token)).andExpect(status().isForbidden());
         mvc.perform(post("/api/mantenimientos").header("Authorization","Bearer "+token).contentType(MediaType.APPLICATION_JSON)
-            .content("{\"bicicletaId\":\"BG-004\",\"tipo\":\"Preventivo\",\"descripcion\":\"Revisión general\",\"latitud\":4.53,\"longitud\":-75.68}"))
+            .content("{\"bicicletaId\":\"BG-004\",\"tipo\":\"Preventivo\",\"descripcion\":\"Revisión general\",\"latitud\":4.53,\"longitud\":-75.6843}"))
             .andExpect(status().isForbidden());
         assertThatThrownBy(() -> operaciones.recibo(id,"U-006")).isInstanceOf(NegocioException.class).hasMessageContaining("no encontrado");
         mvc.perform(get("/api/viajes")).andExpect(status().isUnauthorized());
@@ -125,7 +125,7 @@ class OperacionIntegrationTest {
     @Test void validaPrecisionYCoordenadasEnApi() throws Exception {
         long id=iniciar();String token=auth.iniciarSesion(new LoginRequest("laura@correo.com","BikeGo123!")).token();
         mvc.perform(post("/api/viajes/"+id+"/finalizar").header("Authorization","Bearer "+token).contentType(MediaType.APPLICATION_JSON)
-            .content("{\"latitud\":4.53389,\"longitud\":-75.68111,\"precision\":100}"))
+            .content("{\"latitud\":4.5325,\"longitud\":-75.6736,\"precision\":100}"))
             .andExpect(status().isBadRequest());
         mvc.perform(get("/api/zonas").param("lat","NaN").param("lng","0")).andExpect(status().isBadRequest());
     }

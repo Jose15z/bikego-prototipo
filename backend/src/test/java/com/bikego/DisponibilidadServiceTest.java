@@ -21,8 +21,8 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 @SpringBootTest(properties = {TestDb.URL, "bikego.iot-timeout-ms=200"})
 class DisponibilidadServiceTest {
 
-    static final double PLAZA_LAT = 4.53389;
-    static final double PLAZA_LNG = -75.68111;
+    static final double PLAZA_LAT = 4.5325;
+    static final double PLAZA_LNG = -75.6736;
 
     @Autowired DisponibilidadService servicio;
     @Autowired DataSeeder seeder;

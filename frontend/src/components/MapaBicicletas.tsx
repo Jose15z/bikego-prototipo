@@ -1,12 +1,13 @@
 import { useEffect } from 'react'
 import L from 'leaflet'
 import { Circle, MapContainer, Marker, TileLayer, Tooltip, useMap } from 'react-leaflet'
-import type { Bicicleta, Ubicacion } from '../types'
+import type { Bicicleta, Estacion, Ubicacion } from '../types'
 
 interface Props {
   centro: Ubicacion
   radioMetros: number
   bicicletas: Bicicleta[]
+  estaciones: Estacion[]
   onSeleccionar: (id: string) => void
 }
 
@@ -21,15 +22,25 @@ const iconoBici = (bateria: number) =>
 
 const iconoUsuario = L.divIcon({ className: '', html: '<div class="marcador-usuario"></div>', iconSize: [18, 18], iconAnchor: [9, 9] })
 
+const iconoEstacion = L.divIcon({ className: '', html: '<div class="marcador-estacion">E</div>', iconSize: [28, 28], iconAnchor: [14, 14] })
+
 function Recentrar({ lat, lng, radio }: { lat: number; lng: number; radio: number }) {
   const map = useMap()
   useEffect(() => {
-    map.fitBounds(L.latLng(lat, lng).toBounds(radio * 2), { padding: [8, 8] })
+    // Un ajuste inmediato evita callbacks de zoom sobre capas que ya se desmontaron.
+    map.fitBounds(L.latLng(lat, lng).toBounds(radio * 2), { padding: [8, 8], animate: false })
   }, [lat, lng, radio, map])
   return null
 }
 
-export default function MapaBicicletas({ centro, radioMetros, bicicletas, onSeleccionar }: Props) {
+function MarcadoresEstaciones({ estaciones }: { estaciones: Estacion[] }) {
+  const map = useMap()
+  return <>{estaciones.map(e => <Marker key={e.id} position={[e.latitud, e.longitud]} icon={iconoEstacion} zIndexOffset={500} eventHandlers={{click: () => map.setView([e.latitud, e.longitud],18,{animate:false})}}>
+    <Tooltip>{e.nombre}{e.referencia ? ` · ${e.referencia}` : ''}<br/>Haz clic para acercarte al acceso.</Tooltip>
+  </Marker>)}</>
+}
+
+export default function MapaBicicletas({ centro, radioMetros, bicicletas, estaciones, onSeleccionar }: Props) {
   return (
     <div className="mapa">
       <MapContainer center={[centro.lat, centro.lng]} zoom={15} scrollWheelZoom style={{ height: '100%' }}>
@@ -42,6 +53,7 @@ export default function MapaBicicletas({ centro, radioMetros, bicicletas, onSele
         <Marker position={[centro.lat, centro.lng]} icon={iconoUsuario}>
           <Tooltip>{centro.etiqueta}</Tooltip>
         </Marker>
+        <MarcadoresEstaciones estaciones={estaciones} />
         {bicicletas.map((b) => (
           <Marker
             key={b.id}

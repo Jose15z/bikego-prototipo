@@ -53,6 +53,11 @@ public class Bicicleta {
         if (estado != EstadoBicicleta.EN_MANTENIMIENTO) estado = EstadoBicicleta.DISPONIBLE;
     }
 
+    /** Actualiza solo la posición; conserva estado, batería y estación asignada. */
+    public void reubicar(double latitud, double longitud) {
+        this.latitud = latitud; this.longitud = longitud;
+    }
+
     public String getId() { return id; }
     public EstadoBicicleta getEstado() { return estado; }
     public int getBateria() { return bateria; }

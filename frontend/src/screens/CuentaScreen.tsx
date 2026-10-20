@@ -24,7 +24,7 @@ export default function CuentaScreen({ usuario, onActualizar }: { usuario: Usuar
     </section><MetodoPagoForm onGuardado={() => { setMensaje('Tarjeta validada y guardada.'); onActualizar(); cargar() }} /></div>
     {mensaje && <p className="tarjeta" role="status">{mensaje}</p>}
     {rechazos.length > 0 && <section className="tarjeta"><h2>Actividad de pagos</h2>{rechazos.map(r => <div key={r.id} className="actividad"><span>{r.motivo}</span><small>{new Date(r.fecha).toLocaleString('es-CO')}</small></div>)}</section>}
-    <p className="sub">Entorno de demostración: la pasarela de pagos es simulada y no realiza cargos reales.</p>
+    <p className="sub">Los movimientos de esta versión no generan cargos bancarios.</p>
     <BandejaMensajes />
   </div>
 }

@@ -30,7 +30,7 @@ class AutenticacionServiceTest {
     @Test
     void registroVerificacionLoginYCierreDeSesion() {
         RegistroRequest req = new RegistroRequest("Ana Torres", "1094000999", "ana@correo.com",
-                "+57 3001234567", LocalDate.of(2000, 4, 8), "Carrera 10 # 20-30", "ClaveSegura123", true);
+                "+57 3001234567", LocalDate.of(2000, 4, 8), "Carrera 10 # 20-30", "ClaveSegura123", true, true);
         var registro = autenticacion.registrar(req);
         assertThat(usuarios.findByCorreoIgnoreCase(req.correo()).orElseThrow().getEstadoCuenta())
                 .isEqualTo(EstadoCuenta.PENDIENTE_VERIFICACION);
@@ -45,11 +45,11 @@ class AutenticacionServiceTest {
     @Test
     void rechazaCorreoYDocumentoDuplicados() {
         RegistroRequest correoDuplicado = new RegistroRequest("Otra Laura", "1094000888", "laura@correo.com",
-                "3001234567", LocalDate.of(2000, 1, 1), "Armenia", "ClaveSegura123", true);
+                "3001234567", LocalDate.of(2000, 1, 1), "Armenia", "ClaveSegura123", true, true);
         assertThatThrownBy(() -> autenticacion.registrar(correoDuplicado))
                 .extracting("codigo").isEqualTo(CodigoError.CORREO_DUPLICADO);
         RegistroRequest documentoDuplicado = new RegistroRequest("Otra persona", "10000001", "otra@correo.com",
-                "3001234567", LocalDate.of(2000, 1, 1), "Armenia", "ClaveSegura123", true);
+                "3001234567", LocalDate.of(2000, 1, 1), "Armenia", "ClaveSegura123", true, true);
         assertThatThrownBy(() -> autenticacion.registrar(documentoDuplicado))
                 .extracting("codigo").isEqualTo(CodigoError.DOCUMENTO_DUPLICADO);
     }

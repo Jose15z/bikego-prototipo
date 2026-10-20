@@ -71,7 +71,7 @@ export default function ViajeScreen({ viajeInicial, recibidoEn, onFinalizado }: 
 
       <div className="tarjeta">
         <p className="sub">
-          Tarifa de prueba: {formatoCOP(viaje.tarifaBase)} base + {formatoCOP(viaje.tarifaMinuto)} por minuto.
+          Tarifa del viaje: {formatoCOP(viaje.tarifaBase)} base + {formatoCOP(viaje.tarifaMinuto)} por minuto.
           La distancia es estimada. Al finalizar se valida la ubicación de devolución.
         </p>
       </div>

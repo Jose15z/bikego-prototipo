@@ -24,7 +24,17 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorDto> validacion(MethodArgumentNotValidException e) {
         String detalle = e.getBindingResult().getFieldErrors().stream()
-                .map(f -> f.getField() + ": " + f.getDefaultMessage())
+                .map(f -> switch(f.getField()) {
+                    case "nombre" -> "Escribe tu nombre completo (3 a 100 caracteres).";
+                    case "documento" -> "Documento: usa de 5 a 20 letras, números, puntos o guiones.";
+                    case "correo" -> "Escribe un correo electrónico válido.";
+                    case "telefono" -> "Teléfono: usa de 7 a 16 dígitos, con prefijo + opcional.";
+                    case "fechaNacimiento" -> "Selecciona una fecha de nacimiento anterior a hoy.";
+                    case "direccion" -> "Escribe tu dirección (hasta 160 caracteres).";
+                    case "password" -> "La contraseña debe tener entre 10 y 128 caracteres.";
+                    case "titular" -> "Escribe el nombre del titular de la tarjeta.";
+                    default -> f.getDefaultMessage();
+                })
                 .collect(Collectors.joining("; "));
         return ResponseEntity.badRequest().body(new ErrorDto(CodigoError.DATOS_INVALIDOS.name(), detalle, null));
     }

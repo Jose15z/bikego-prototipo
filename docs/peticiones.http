@@ -23,7 +23,7 @@ GET http://localhost:8080/api/auth/me
 Authorization: Bearer {{token}}
 
 ### F-01 bicicletas cercanas a la Plaza de Bolivar
-GET http://localhost:8080/api/bicicletas/cercanas?lat=4.53389&lng=-75.68111
+GET http://localhost:8080/api/bicicletas/cercanas?lat=4.5325454&lng=-75.6730287
 
 ### F-02 camino feliz (la identidad sale de la sesion)
 POST http://localhost:8080/api/alquileres

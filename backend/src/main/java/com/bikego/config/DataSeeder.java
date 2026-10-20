@@ -1,8 +1,6 @@
 package com.bikego.config;
 
-import com.bikego.domain.Bicicleta;
 import com.bikego.domain.Estacion;
-import com.bikego.domain.EstadoBicicleta;
 import com.bikego.domain.EstadoCuenta;
 import com.bikego.domain.Usuario;
 import com.bikego.repository.BicicletaRepository;
@@ -17,18 +15,16 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import static com.bikego.domain.EstadoBicicleta.DISPONIBLE;
-import static com.bikego.domain.EstadoBicicleta.EN_MANTENIMIENTO;
-import static com.bikego.domain.EstadoBicicleta.EN_USO;
 
 /**
- * Datos de prueba en Armenia (Quindio). Las coordenadas de las estaciones son aproximadas.
+ * Datos de prueba en Armenia (Quindio). Ubicaciones contrastadas con OpenStreetMap; flota simulada de diez bicicletas por estación.
  * Cada bicicleta y cada usuario cubre un caso de verificacion del Plan de Requisitos.
  */
 @Component
 public class DataSeeder implements ApplicationRunner {
     private static final String PASSWORD_INICIAL_HASH = SeguridadHash.password("BikeGo123!");
 
+    private final CatalogoDemostracion catalogo;
     private final EstacionRepository estaciones;
     private final BicicletaRepository bicicletas;
     private final UsuarioRepository usuarios;
@@ -37,7 +33,8 @@ public class DataSeeder implements ApplicationRunner {
     private final SesionRepository sesiones;
 
     public DataSeeder(EstacionRepository estaciones, BicicletaRepository bicicletas, UsuarioRepository usuarios,
-                      ViajeRepository viajes, RechazoPagoRepository rechazos, SesionRepository sesiones) {
+                      ViajeRepository viajes, RechazoPagoRepository rechazos, SesionRepository sesiones, CatalogoDemostracion catalogo) {
+        this.catalogo = catalogo;
         this.estaciones = estaciones;
         this.bicicletas = bicicletas;
         this.usuarios = usuarios;
@@ -49,6 +46,7 @@ public class DataSeeder implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) {
         if (estaciones.count() == 0) cargar();
+        else catalogo.sincronizar();
         crearPersonal();
     }
 
@@ -61,25 +59,10 @@ public class DataSeeder implements ApplicationRunner {
         usuarios.deleteAllInBatch();
         estaciones.deleteAllInBatch();
 
-        Estacion plaza = estaciones.save(new Estacion("EST-01", "Plaza de Bolívar", 4.53389, -75.68111));
-        Estacion uq = estaciones.save(new Estacion("EST-02", "Universidad del Quindío", 4.55530, -75.66050));
-        Estacion vida = estaciones.save(new Estacion("EST-03", "Parque de la Vida", 4.54740, -75.66520));
-        Estacion unicentro = estaciones.save(new Estacion("EST-04", "C.C. Unicentro", 4.54060, -75.66940));
-        Estacion centenario = estaciones.save(new Estacion("EST-05", "Estadio Centenario", 4.52560, -75.69180));
-        Estacion terminal = estaciones.save(new Estacion("EST-06", "Terminal de Transportes", 4.52070, -75.68000));
-
-        bici("BG-001", DISPONIBLE, 85, plaza, 0.00020, 0.00015, false);
-        bici("BG-002", DISPONIBLE, 15, plaza, -0.00018, 0.00022, false);      // bateria < 20 %: oculta (RN-005)
-        bici("BG-003", EN_MANTENIMIENTO, 90, plaza, 0.00012, -0.00025, false); // oculta (RN-003)
-        bici("BG-004", DISPONIBLE, 62, unicentro, 0.00010, 0.00012, false);
-        bici("BG-005", EN_USO, 70, unicentro, -0.00015, -0.00010, false);      // oculta (RN-002)
-        bici("BG-006", DISPONIBLE, 100, uq, 0.00015, 0.00020, false);
-        bici("BG-007", DISPONIBLE, 45, uq, -0.00020, -0.00012, false);
-        bici("BG-008", DISPONIBLE, 33, vida, 0.00010, -0.00018, true);         // candado sin respuesta (SWR-02.5)
-        bici("BG-009", DISPONIBLE, 78, centenario, 0.00014, 0.00010, false);
-        bici("BG-010", DISPONIBLE, 20, terminal, 0.00012, 0.00016, false);     // limite exacto: visible
-        bici("BG-011", DISPONIBLE, 19, terminal, -0.00010, 0.00008, false);    // 19 %: oculta
-        bici("BG-012", EN_MANTENIMIENTO, 50, vida, -0.00016, 0.00014, false);
+        for (var e : catalogo.estacionesIniciales()) {
+            estaciones.save(new Estacion(e.id(), e.nombre(), e.latitud(), e.longitud()));
+        }
+        catalogo.sincronizar();
 
         usuario("U-001", "10000001", "Laura Gómez", "laura@correo.com", EstadoCuenta.ACTIVA, 0,
                 "tok_ok_4242", "Visa", "4242", "Cuenta activa, sin deuda y tarjeta vigente");
@@ -113,9 +96,4 @@ public class DataSeeder implements ApplicationRunner {
         usuarios.save(usuario);
     }
 
-    private void bici(String id, EstadoBicicleta estado, int bateria, Estacion est,
-                      double dLat, double dLng, boolean candadoConFalla) {
-        bicicletas.save(new Bicicleta(id, estado, bateria, est,
-                est.getLatitud() + dLat, est.getLongitud() + dLng, candadoConFalla));
-    }
 }

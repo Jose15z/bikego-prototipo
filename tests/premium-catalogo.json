@@ -1,0 +1,20 @@
+{
+  "profile": "product-admin",
+  "sourceRoots": [
+    "frontend/src/components/catalogo"
+  ],
+  "locale": "es-CO",
+  "canonicalMap": "UX-CONTRACT.md",
+  "requiredCapabilities": [],
+  "requiredCommands": [
+    "build",
+    "qr"
+  ],
+  "commands": {
+    "build": "npm run build --prefix frontend",
+    "qr": "node tests/e2e/verificar-qr.cjs"
+  },
+  "evidence": {
+    "qr": "tests/e2e/verificar-qr.cjs"
+  }
+}

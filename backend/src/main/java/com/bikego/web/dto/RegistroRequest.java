@@ -18,4 +18,13 @@ public record RegistroRequest(
         @NotNull @Past LocalDate fechaNacimiento,
         @NotBlank @Size(max = 160) String direccion,
         @NotBlank @Size(min = 10, max = 128) String password,
-        @AssertTrue boolean aceptaTerminos) { }
+        @AssertTrue(message="Debes aceptar los términos de uso") boolean aceptaTerminos,
+        @AssertTrue(message="Debes autorizar el tratamiento de datos personales") boolean aceptaPrivacidad) {
+    public RegistroRequest {
+        if(nombre!=null) nombre=nombre.trim();
+        if(correo!=null) correo=correo.trim();
+        if(documento!=null) documento=documento.trim();
+        if(direccion!=null) direccion=direccion.trim();
+        if(telefono!=null) telefono=telefono.replaceAll("[\\s\\p{Zs}()\\-]", "");
+    }
+}

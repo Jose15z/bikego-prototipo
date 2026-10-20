@@ -1,0 +1,13 @@
+{
+  "name": "bikego-functional-tests",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node funcionalidades.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "sharp": "^0.34.0",
+    "pngjs": "^7.0.0"
+  }
+}

@@ -31,7 +31,7 @@ export function ReciboScreen({ id, onActualizar }: { id: number; onActualizar: (
       <dl className="datos"><dt>Tarifa de desbloqueo</dt><dd>{formatoCOP(recibo.tarifaBase)}</dd><dt>{recibo.minutos} {recibo.minutos === 1 ? 'minuto' : 'minutos'} × {formatoCOP(recibo.tarifaMinuto)}</dt><dd>{formatoCOP(recibo.minutos * recibo.tarifaMinuto)}</dd><dt>Recargo por más de 4 horas</dt><dd>{formatoCOP(recibo.recargo)}</dd><dt>Total del viaje</dt><dd>{formatoCOP(recibo.total)}</dd></dl>
       {recibo.estadoPago === 'PENDIENTE' && <><p className="sub">Si tu tarjeta fue rechazada, actualízala en Cuenta y pagos y vuelve a intentar. Reintentar no duplica el cobro.</p><button className="primario" onClick={pagar} disabled={ocupado}>{ocupado ? 'Procesando…' : 'Pagar viaje'}</button></>}
       {recibo.estadoPago === 'ANULADO' && <p className="sub">El operador anuló el cobro. No tienes que pagar este viaje.</p>}
-      <button className="secundario no-imprimir" onClick={() => window.print()}>Imprimir / guardar recibo PDF</button><p className="sub">Recibo de demostración. El correo está disponible en la bandeja de Cuenta y pagos.</p>
+      <button className="secundario no-imprimir" onClick={() => window.print()}>Imprimir / guardar recibo PDF</button><p className="sub">El recibo está disponible en la bandeja de Cuenta y pagos.</p>
     </section>}
   </div>
 }

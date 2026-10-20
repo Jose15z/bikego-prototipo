@@ -32,7 +32,7 @@ class ApiIntegrationTest {
     @Test
     @DisplayName("GET /api/bicicletas/cercanas devuelve la lista ordenada por distancia")
     void cercanas() throws Exception {
-        mvc.perform(get("/api/bicicletas/cercanas").param("lat", "4.53389").param("lng", "-75.68111"))
+        mvc.perform(get("/api/bicicletas/cercanas").param("lat", "4.5325").param("lng", "-75.6736"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.radioMetros").value(1000))
                 .andExpect(jsonPath("$.bicicletas[0].id").value("BG-001"));
@@ -43,7 +43,7 @@ class ApiIntegrationTest {
     void estaciones() throws Exception {
         mvc.perform(get("/api/estaciones"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.length()").value(6));
+                .andExpect(jsonPath("$.length()").value(52));
     }
 
     @Test

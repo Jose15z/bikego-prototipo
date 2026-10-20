@@ -1,3 +1,4 @@
+import { validarFormulario } from '../components/validarFormulario'
 import { useCallback, useState } from 'react'
 import { api, ApiError } from '../api'
 import type { Bicicleta, Viaje } from '../types'
@@ -85,7 +86,7 @@ export default function EscanearScreen({ bicicleta, onVolver, onViajeIniciado, o
     const esQr = error.accionSugerida === 'REINTENTAR_O_INGRESAR_ID'
     return (
       <div className="pantalla">
-        <div className="tarjeta error">
+        <div id="escaneo-error" className="tarjeta error">
           <h2>{TITULOS[error.codigo] ?? 'No se pudo iniciar el alquiler'}</h2>
           <p>{error.message}</p>
           <p className="codigo">Código: {error.codigo}</p>
@@ -136,10 +137,11 @@ export default function EscanearScreen({ bicicleta, onVolver, onViajeIniciado, o
       )}
 
       {modo === 'manual' && (
-        <form
+        <form noValidate
           className="tarjeta"
           onSubmit={(e) => {
             e.preventDefault()
+            const invalid=validarFormulario(e,'escaneo-error');if(invalid){setError(new ApiError(400,{codigo:'DATOS_INVALIDOS',mensaje:invalid,accionSugerida:null}));return}
             iniciar(idManual)
           }}
         >

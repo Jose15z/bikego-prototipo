@@ -1,0 +1,5313 @@
+{
+  "version": "2026-10-acceso-legal-corredor-sur-v10",
+  "fechaConsulta": "2026-10-20",
+  "nota": "Puntos de encuentro orientativos en accesos exteriores; no representan infraestructura física instalada. Coordenadas contrastadas con geometrías de OpenStreetMap.",
+  "estaciones": [
+    {
+      "id": "EST-01",
+      "nombre": "Plaza de Bolívar",
+      "latitud": 4.5325,
+      "longitud": -75.6736,
+      "osm": "https://www.openstreetmap.org/relation/3871094",
+      "coordenadasAnteriores": {
+        "latitud": 4.53389,
+        "longitud": -75.68111
+      },
+      "referencia": "Borde occidental de la plaza, junto al acceso peatonal."
+    },
+    {
+      "id": "EST-02",
+      "nombre": "Universidad del Quindío",
+      "latitud": 4.55394,
+      "longitud": -75.65818,
+      "osm": "https://www.openstreetmap.org/way/181927289",
+      "coordenadasAnteriores": {
+        "latitud": 4.5553,
+        "longitud": -75.6605
+      },
+      "referencia": "Costado oriental del campus, sobre el acceso exterior."
+    },
+    {
+      "id": "EST-03",
+      "nombre": "Parque de la Vida",
+      "latitud": 4.54805,
+      "longitud": -75.66148,
+      "osm": "https://www.openstreetmap.org/way/1528659509",
+      "coordenadasAnteriores": {
+        "latitud": 4.5474,
+        "longitud": -75.6652
+      },
+      "referencia": "Costado occidental del parque, junto al acceso exterior."
+    },
+    {
+      "id": "EST-04",
+      "nombre": "C.C. Unicentro",
+      "latitud": 4.5405,
+      "longitud": -75.66655,
+      "osm": "https://www.openstreetmap.org/way/183036080",
+      "coordenadasAnteriores": {
+        "latitud": 4.5406,
+        "longitud": -75.6694
+      },
+      "referencia": "Acceso exterior del centro comercial, costado occidental."
+    },
+    {
+      "id": "EST-05",
+      "nombre": "Estadio Centenario",
+      "latitud": 4.51535,
+      "longitud": -75.69966,
+      "osm": "https://www.openstreetmap.org/way/306472491",
+      "coordenadasAnteriores": {
+        "latitud": 4.5256,
+        "longitud": -75.6918
+      },
+      "referencia": "Explanada exterior del costado occidental del estadio."
+    },
+    {
+      "id": "EST-06",
+      "nombre": "Terminal de Transportes",
+      "latitud": 4.52805,
+      "longitud": -75.6843,
+      "osm": "https://www.openstreetmap.org/way/270168957",
+      "coordenadasAnteriores": {
+        "latitud": 4.5207,
+        "longitud": -75.68
+      },
+      "referencia": "Acceso peatonal exterior, costado norte de la terminal."
+    },
+    {
+      "id": "EST-07",
+      "nombre": "Avenida Centenario · Sur",
+      "latitud": 4.5424031,
+      "longitud": -75.6587557,
+      "osm": "https://www.openstreetmap.org/way/268111610",
+      "coordenadasAnteriores": {
+        "latitud": 4.5424031,
+        "longitud": -75.6587557
+      },
+      "referencia": "Punto exterior junto a Carrera 6, sector sur."
+    },
+    {
+      "id": "EST-08",
+      "nombre": "Avenida Centenario · Sector medio",
+      "latitud": 4.5575871,
+      "longitud": -75.6492083,
+      "osm": "https://www.openstreetmap.org/way/909896897",
+      "coordenadasAnteriores": {
+        "latitud": 4.5575871,
+        "longitud": -75.6492083
+      },
+      "referencia": "Punto exterior junto a Carrera 6, sector sector medio."
+    },
+    {
+      "id": "EST-09",
+      "nombre": "Avenida Centenario · Norte",
+      "latitud": 4.5741429,
+      "longitud": -75.6386606,
+      "osm": "https://www.openstreetmap.org/way/82650549",
+      "coordenadasAnteriores": {
+        "latitud": 4.5741429,
+        "longitud": -75.6386606
+      },
+      "referencia": "Punto exterior junto a Carrera 6, sector norte."
+    },
+    {
+      "id": "EST-10",
+      "nombre": "Carrera 19 · Sur",
+      "latitud": 4.5220826,
+      "longitud": -75.686578,
+      "osm": "https://www.openstreetmap.org/way/1309981598",
+      "coordenadasAnteriores": {
+        "latitud": 4.5220826,
+        "longitud": -75.686578
+      },
+      "referencia": "Punto exterior junto a Carrera 19, sector sur."
+    },
+    {
+      "id": "EST-11",
+      "nombre": "Carrera 19 · Centro",
+      "latitud": 4.5367844,
+      "longitud": -75.673586,
+      "osm": "https://www.openstreetmap.org/way/296113194",
+      "coordenadasAnteriores": {
+        "latitud": 4.5367844,
+        "longitud": -75.673586
+      },
+      "referencia": "Punto exterior junto a Avenida Guillermo León Valencia, sector centro."
+    },
+    {
+      "id": "EST-12",
+      "nombre": "Carrera 19 · Norte",
+      "latitud": 4.5556459,
+      "longitud": -75.662566,
+      "osm": "https://www.openstreetmap.org/way/1056107223",
+      "coordenadasAnteriores": {
+        "latitud": 4.5556459,
+        "longitud": -75.662566
+      },
+      "referencia": "Punto exterior junto a Avenida 19 de Enero, sector norte."
+    },
+    {
+      "id": "EST-13",
+      "nombre": "Calle 50 · Occidente",
+      "latitud": 4.5197394,
+      "longitud": -75.7071372,
+      "osm": "https://www.openstreetmap.org/way/915569965",
+      "coordenadasAnteriores": {
+        "latitud": 4.5197394,
+        "longitud": -75.7071372
+      },
+      "referencia": "Punto exterior junto a Calle 50, sector occidente."
+    },
+    {
+      "id": "EST-14",
+      "nombre": "Calle 50 · Oriente",
+      "latitud": 4.5210187,
+      "longitud": -75.6916191,
+      "osm": "https://www.openstreetmap.org/way/1093223827",
+      "coordenadasAnteriores": {
+        "latitud": 4.5210187,
+        "longitud": -75.6916191
+      },
+      "referencia": "Punto exterior junto a Calle 50, sector oriente."
+    },
+    {
+      "id": "EST-15",
+      "nombre": "Calle 23 · Occidente",
+      "latitud": 4.5407842,
+      "longitud": -75.7067577,
+      "osm": "https://www.openstreetmap.org/way/304026312",
+      "coordenadasAnteriores": {
+        "latitud": 4.5407842,
+        "longitud": -75.7067577
+      },
+      "referencia": "Punto exterior junto a la calle 23, sector occidente."
+    },
+    {
+      "id": "EST-16",
+      "nombre": "Calle 23 · Oriente",
+      "latitud": 4.5344397,
+      "longitud": -75.6770169,
+      "osm": "https://www.openstreetmap.org/way/957578287",
+      "coordenadasAnteriores": {
+        "latitud": 4.5344397,
+        "longitud": -75.6770169
+      },
+      "referencia": "Punto exterior junto a la calle 23, sector oriente."
+    },
+    {
+      "id": "EST-17",
+      "nombre": "Granada · Carrera 23",
+      "latitud": 4.5436828,
+      "longitud": -75.6711803,
+      "osm": "https://www.openstreetmap.org/node/672981372",
+      "referencia": "Barrio Granada, costado exterior de la carrera 23, sector de la calle 11.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5443436,
+        "longitud": -75.6699259
+      }
+    },
+    {
+      "id": "EST-18",
+      "nombre": "Colegio San José",
+      "latitud": 4.5377843,
+      "longitud": -75.6775061,
+      "osm": "https://www.openstreetmap.org/way/303417274",
+      "referencia": "Punto exterior junto al acceso del colegio, sobre la carrera 23.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5377843,
+        "longitud": -75.6775061
+      }
+    },
+    {
+      "id": "EST-19",
+      "nombre": "Coliseo del Café",
+      "latitud": 4.5484413,
+      "longitud": -75.6682437,
+      "osm": "https://www.openstreetmap.org/way/270191147",
+      "referencia": "Costado exterior de la calle 5 Norte, junto al acceso del coliseo.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5484413,
+        "longitud": -75.6682437
+      }
+    },
+    {
+      "id": "EST-20",
+      "nombre": "Barrio Laureles",
+      "latitud": 4.5596614,
+      "longitud": -75.6559694,
+      "osm": "https://www.openstreetmap.org/node/672963744",
+      "referencia": "Punto de encuentro sobre la vía del barrio Laureles.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5596614,
+        "longitud": -75.6559694
+      }
+    },
+    {
+      "id": "EST-21",
+      "nombre": "Portal del Quindío",
+      "latitud": 4.5586877,
+      "longitud": -75.6555829,
+      "osm": "https://www.openstreetmap.org/relation/10577553",
+      "referencia": "Costado exterior junto a la avenida Bolívar, acceso del centro comercial.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5586877,
+        "longitud": -75.6555829
+      }
+    },
+    {
+      "id": "EST-22",
+      "nombre": "Museo del Oro Quimbaya",
+      "latitud": 4.5709442,
+      "longitud": -75.6478021,
+      "osm": "https://www.openstreetmap.org/way/295171104",
+      "referencia": "Punto exterior sobre la avenida Bolívar, junto al acceso del museo.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5709442,
+        "longitud": -75.6478021
+      }
+    },
+    {
+      "id": "EST-23",
+      "nombre": "Oro Negro",
+      "latitud": 4.5765752,
+      "longitud": -75.6447502,
+      "osm": "https://www.openstreetmap.org/node/11619978402",
+      "referencia": "Punto exterior sobre la vía de acceso al sector Oro Negro.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5765752,
+        "longitud": -75.6447502
+      }
+    },
+    {
+      "id": "EST-24",
+      "nombre": "Mercar",
+      "latitud": 4.527497,
+      "longitud": -75.7133711,
+      "osm": "https://www.openstreetmap.org/way/293128586",
+      "referencia": "Punto exterior junto al acceso de Mercar, sobre la vía Armenia–Montenegro.",
+      "coordenadasAnteriores": {
+        "latitud": 4.527497,
+        "longitud": -75.7133711
+      }
+    },
+    {
+      "id": "EST-25",
+      "nombre": "C.C. Veranera Plaza",
+      "latitud": 4.5311978,
+      "longitud": -75.6943145,
+      "osm": "https://www.openstreetmap.org/way/307233688",
+      "referencia": "Acceso exterior del centro comercial, costado de la calle 30.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5311978,
+        "longitud": -75.6943145
+      }
+    },
+    {
+      "id": "EST-26",
+      "nombre": "Avenida Tigreros",
+      "latitud": 4.5281251,
+      "longitud": -75.698788,
+      "osm": "https://www.openstreetmap.org/way/1056919792",
+      "referencia": "Punto de encuentro junto al andén de la avenida Tigreros.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5281251,
+        "longitud": -75.698788
+      }
+    },
+    {
+      "id": "EST-27",
+      "nombre": "Las Américas",
+      "latitud": 4.5434942,
+      "longitud": -75.6889851,
+      "osm": "https://www.openstreetmap.org/way/694361186",
+      "referencia": "Punto exterior junto a la vía del sector Tesalónica, más al occidente de Las Américas.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5426777,
+        "longitud": -75.68477
+      }
+    },
+    {
+      "id": "EST-28",
+      "nombre": "Estadio San José",
+      "latitud": 4.5407459,
+      "longitud": -75.6846425,
+      "osm": "https://www.openstreetmap.org/way/306774257",
+      "referencia": "Punto exterior junto al acceso del estadio San José por la calle 24.",
+      "coordenadasAnteriores": {
+        "latitud": 4.540894,
+        "longitud": -75.6851871
+      }
+    },
+    {
+      "id": "EST-29",
+      "nombre": "La Florida · Torres del Río",
+      "latitud": 4.5301522,
+      "longitud": -75.6697367,
+      "osm": "https://www.openstreetmap.org/way/297824626",
+      "referencia": "Punto junto a la vía entre el puente La Florida y Torres del Río, fuera del puente y del conjunto.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5301522,
+        "longitud": -75.6697367
+      }
+    },
+    {
+      "id": "EST-30",
+      "nombre": "Cancha Ciudad Dorada",
+      "latitud": 4.5291305,
+      "longitud": -75.7037741,
+      "osm": "https://www.openstreetmap.org/way/310447214",
+      "referencia": "Acceso exterior de la cancha de fútbol del barrio Ciudad Dorada, junto a la vía y fuera del campo.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5291305,
+        "longitud": -75.7037741
+      }
+    },
+    {
+      "id": "EST-31",
+      "nombre": "Bosques de Pinares",
+      "latitud": 4.5129541,
+      "longitud": -75.693275,
+      "osm": "https://www.openstreetmap.org/way/317822929",
+      "referencia": "Punto exterior junto a Carrera 13, sector Bosques de Pinares.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5129541,
+        "longitud": -75.693275
+      }
+    },
+    {
+      "id": "EST-32",
+      "nombre": "Puerto Espejo",
+      "latitud": 4.5175046,
+      "longitud": -75.7117875,
+      "osm": "https://www.openstreetmap.org/node/3222149211",
+      "referencia": "Punto exterior junto a la vía de acceso, sector Puerto Espejo.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5175046,
+        "longitud": -75.7117875
+      }
+    },
+    {
+      "id": "EST-33",
+      "nombre": "La Fachada",
+      "latitud": 4.520448,
+      "longitud": -75.7144095,
+      "osm": "https://www.openstreetmap.org/node/3222149216",
+      "referencia": "Punto exterior junto a Calle 47, sector La Fachada.",
+      "coordenadasAnteriores": {
+        "latitud": 4.520448,
+        "longitud": -75.7144095
+      }
+    },
+    {
+      "id": "EST-34",
+      "nombre": "La Adiela",
+      "latitud": 4.532011,
+      "longitud": -75.705661,
+      "osm": "https://www.openstreetmap.org/node/3158713624",
+      "referencia": "Punto exterior junto a la vía de acceso, sector La Adiela.",
+      "coordenadasAnteriores": {
+        "latitud": 4.532011,
+        "longitud": -75.705661
+      }
+    },
+    {
+      "id": "EST-35",
+      "nombre": "Barrio Santander",
+      "latitud": 4.5270474,
+      "longitud": -75.6869359,
+      "osm": "https://www.openstreetmap.org/node/3130398805",
+      "referencia": "Punto exterior junto a Carrera 25, sector Barrio Santander.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5270474,
+        "longitud": -75.6869359
+      }
+    },
+    {
+      "id": "EST-36",
+      "nombre": "Parque El Bosque",
+      "latitud": 4.5365276,
+      "longitud": -75.6804084,
+      "osm": "https://www.openstreetmap.org/way/183040917",
+      "referencia": "Punto exterior junto a Carrera 23, sector Parque El Bosque.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5365276,
+        "longitud": -75.6804084
+      }
+    },
+    {
+      "id": "EST-37",
+      "nombre": "La Patria",
+      "latitud": 4.5411376,
+      "longitud": -75.7024464,
+      "osm": "https://www.openstreetmap.org/node/2984017657",
+      "referencia": "Punto exterior junto a Calle 20, sector La Patria.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5411376,
+        "longitud": -75.7024464
+      }
+    },
+    {
+      "id": "EST-38",
+      "nombre": "Parque Valencia",
+      "latitud": 4.5375169,
+      "longitud": -75.676494,
+      "osm": "https://www.openstreetmap.org/relation/4004856",
+      "referencia": "Punto exterior junto a Carrera 22, sector Parque Valencia.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5375169,
+        "longitud": -75.676494
+      }
+    },
+    {
+      "id": "EST-39",
+      "nombre": "Los Álamos",
+      "latitud": 4.5418049,
+      "longitud": -75.6750393,
+      "osm": "https://www.openstreetmap.org/way/329378614",
+      "referencia": "Punto exterior junto a Avenida del Arriero, sector Los Álamos.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5418049,
+        "longitud": -75.6750393
+      }
+    },
+    {
+      "id": "EST-40",
+      "nombre": "La Mariela",
+      "latitud": 4.5727508,
+      "longitud": -75.6432723,
+      "osm": "https://www.openstreetmap.org/node/3407894154",
+      "referencia": "Punto exterior junto a la vía de acceso, sector La Mariela.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5727508,
+        "longitud": -75.6432723
+      }
+    },
+    {
+      "id": "EST-41",
+      "nombre": "Las Colinas",
+      "latitud": 4.5332163,
+      "longitud": -75.7118327,
+      "osm": "https://www.openstreetmap.org/node/3161440326",
+      "referencia": "Punto exterior junto a la vía de acceso, sector Las Colinas.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5332163,
+        "longitud": -75.7118327
+      }
+    },
+    {
+      "id": "EST-42",
+      "nombre": "Barrio Libertadores",
+      "latitud": 4.5471201,
+      "longitud": -75.6811472,
+      "osm": "https://www.openstreetmap.org/node/8961590074",
+      "referencia": "Punto exterior junto a la vía de acceso, sector Barrio Libertadores.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5471201,
+        "longitud": -75.6811472
+      }
+    },
+    {
+      "id": "EST-43",
+      "nombre": "Avenida 19 de Enero · Calle 10 Norte",
+      "latitud": 4.5520595,
+      "longitud": -75.6654142,
+      "osm": "https://www.openstreetmap.org/way/300562980",
+      "referencia": "Punto exterior junto a la avenida 19 de Enero, sector de calle 10 norte, fuera de la calzada.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5520595,
+        "longitud": -75.6654142
+      }
+    },
+    {
+      "id": "EST-44",
+      "nombre": "Avenida 19 de Enero · Calle 19 Norte",
+      "latitud": 4.5585073,
+      "longitud": -75.6597647,
+      "osm": "https://www.openstreetmap.org/way/30652475",
+      "referencia": "Punto exterior junto a la avenida 19 de Enero, sector de calle 19 norte, fuera de la calzada.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5585073,
+        "longitud": -75.6597647
+      }
+    },
+    {
+      "id": "EST-45",
+      "nombre": "Avenida 19 de Enero · Calle 23A Norte",
+      "latitud": 4.5637432,
+      "longitud": -75.6566823,
+      "osm": "https://www.openstreetmap.org/way/816697684",
+      "referencia": "Punto exterior junto a la avenida 19 de Enero, sector de calle 23a norte, fuera de la calzada.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5637432,
+        "longitud": -75.6566823
+      }
+    },
+    {
+      "id": "EST-46",
+      "nombre": "Avenida 19 de Enero · Calle 30 Norte",
+      "latitud": 4.5661464,
+      "longitud": -75.6530321,
+      "osm": "https://www.openstreetmap.org/way/1056914408",
+      "referencia": "Punto exterior junto a la avenida 19 de Enero, sector de calle 30 norte, fuera de la calzada.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5661464,
+        "longitud": -75.6530321
+      }
+    },
+    {
+      "id": "EST-47",
+      "nombre": "Jardines de Armenia",
+      "latitud": 4.5072283,
+      "longitud": -75.6907413,
+      "osm": "https://www.openstreetmap.org/way/308547109",
+      "referencia": "Acceso exterior del cementerio Jardines de Armenia, junto a la entrada principal por carrera 8.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5072283,
+        "longitud": -75.6907413
+      }
+    },
+    {
+      "id": "EST-48",
+      "nombre": "Aeropuerto El Edén",
+      "latitud": 4.4527724,
+      "longitud": -75.7684981,
+      "osm": "https://www.openstreetmap.org/way/302976628",
+      "referencia": "Punto exterior de la terminal nacional, junto al acceso público terrestre; fuera del edificio y del área operativa aérea.",
+      "coordenadasAnteriores": {
+        "latitud": 4.4527724,
+        "longitud": -75.7684981
+      }
+    },
+    {
+      "id": "EST-49",
+      "nombre": "Mall Paraíso · Club Campestre",
+      "latitud": 4.4711414,
+      "longitud": -75.7645361,
+      "osm": "https://www.openstreetmap.org/way/572750344",
+      "referencia": "Acceso exterior de Mall Paraíso, sector glorieta del Club Campestre.",
+      "coordenadasAnteriores": {
+        "latitud": 4.4711414,
+        "longitud": -75.7645361
+      }
+    },
+    {
+      "id": "EST-50",
+      "nombre": "Soledén",
+      "latitud": 4.4806299,
+      "longitud": -75.750469,
+      "osm": "https://www.openstreetmap.org/way/444140559",
+      "referencia": "Punto exterior de Soledén, junto al acceso desde la vía Armenia–El Edén.",
+      "coordenadasAnteriores": {
+        "latitud": 4.4806299,
+        "longitud": -75.750469
+      }
+    },
+    {
+      "id": "EST-51",
+      "nombre": "Universidad La Gran Colombia · Sede campestre",
+      "latitud": 4.488158,
+      "longitud": -75.7441023,
+      "osm": "https://www.openstreetmap.org/way/444142019",
+      "referencia": "Fuera del campus La Santa María, junto al acceso de avenida El Edén.",
+      "coordenadasAnteriores": {
+        "latitud": 4.488158,
+        "longitud": -75.7441023
+      }
+    },
+    {
+      "id": "EST-52",
+      "nombre": "Parque de Recreación Popular",
+      "latitud": 4.5010861,
+      "longitud": -75.7164241,
+      "osm": "https://www.openstreetmap.org/way/435396699",
+      "referencia": "Punto exterior frente al acceso del Parque de Recreación Popular, junto a la vía Armenia–El Edén.",
+      "coordenadasAnteriores": {
+        "latitud": 4.5010861,
+        "longitud": -75.7164241
+      }
+    }
+  ],
+  "bicicletas": [
+    {
+      "id": "BG-001",
+      "estacionId": "EST-01",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 5.2e-05,
+      "deltaLongitud": 3.9e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-002",
+      "estacionId": "EST-01",
+      "estado": "DISPONIBLE",
+      "bateria": 15,
+      "deltaLatitud": -4.116e-05,
+      "deltaLongitud": 5.031e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-003",
+      "estacionId": "EST-01",
+      "estado": "EN_MANTENIMIENTO",
+      "bateria": 90,
+      "deltaLatitud": 2.813e-05,
+      "deltaLongitud": -5.86e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-004",
+      "estacionId": "EST-04",
+      "estado": "DISPONIBLE",
+      "bateria": 62,
+      "deltaLatitud": 4.161e-05,
+      "deltaLongitud": 4.993e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-005",
+      "estacionId": "EST-04",
+      "estado": "EN_USO",
+      "bateria": 70,
+      "deltaLatitud": -5.408e-05,
+      "deltaLongitud": -3.606e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-006",
+      "estacionId": "EST-02",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": 3.9e-05,
+      "deltaLongitud": 5.2e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-007",
+      "estacionId": "EST-02",
+      "estado": "DISPONIBLE",
+      "bateria": 45,
+      "deltaLatitud": -5.574e-05,
+      "deltaLongitud": -3.344e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-008",
+      "estacionId": "EST-03",
+      "estado": "DISPONIBLE",
+      "bateria": 33,
+      "deltaLatitud": 3.157e-05,
+      "deltaLongitud": -5.682e-05,
+      "candadoConFalla": true
+    },
+    {
+      "id": "BG-009",
+      "estacionId": "EST-05",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": 5.289e-05,
+      "deltaLongitud": 3.778e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-010",
+      "estacionId": "EST-06",
+      "estado": "DISPONIBLE",
+      "bateria": 20,
+      "deltaLatitud": 3.9e-05,
+      "deltaLongitud": 5.2e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-011",
+      "estacionId": "EST-06",
+      "estado": "DISPONIBLE",
+      "bateria": 19,
+      "deltaLatitud": -5.076e-05,
+      "deltaLongitud": 4.061e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-012",
+      "estacionId": "EST-03",
+      "estado": "EN_MANTENIMIENTO",
+      "bateria": 50,
+      "deltaLatitud": -4.892e-05,
+      "deltaLongitud": 4.28e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-013",
+      "estacionId": "EST-01",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": 6.5e-05,
+      "deltaLongitud": 0.0,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-014",
+      "estacionId": "EST-01",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": 4.045e-05,
+      "deltaLongitud": 5.088e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-015",
+      "estacionId": "EST-01",
+      "estado": "DISPONIBLE",
+      "bateria": 53,
+      "deltaLatitud": -1.442e-05,
+      "deltaLongitud": 6.338e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-016",
+      "estacionId": "EST-01",
+      "estado": "DISPONIBLE",
+      "bateria": 60,
+      "deltaLatitud": -5.853e-05,
+      "deltaLongitud": 2.827e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-017",
+      "estacionId": "EST-01",
+      "estado": "DISPONIBLE",
+      "bateria": 67,
+      "deltaLatitud": -5.853e-05,
+      "deltaLongitud": -2.827e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-018",
+      "estacionId": "EST-01",
+      "estado": "DISPONIBLE",
+      "bateria": 74,
+      "deltaLatitud": -1.442e-05,
+      "deltaLongitud": -6.338e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-019",
+      "estacionId": "EST-01",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": 4.045e-05,
+      "deltaLongitud": -5.088e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-020",
+      "estacionId": "EST-02",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": 6.5e-05,
+      "deltaLongitud": 0.0,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-021",
+      "estacionId": "EST-02",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": 4.589e-05,
+      "deltaLongitud": 4.604e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-022",
+      "estacionId": "EST-02",
+      "estado": "DISPONIBLE",
+      "bateria": 51,
+      "deltaLatitud": 0.0,
+      "deltaLongitud": 6.5e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-023",
+      "estacionId": "EST-02",
+      "estado": "DISPONIBLE",
+      "bateria": 58,
+      "deltaLatitud": -4.589e-05,
+      "deltaLongitud": 4.604e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-024",
+      "estacionId": "EST-02",
+      "estado": "DISPONIBLE",
+      "bateria": 65,
+      "deltaLatitud": -6.5e-05,
+      "deltaLongitud": 0.0,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-025",
+      "estacionId": "EST-02",
+      "estado": "DISPONIBLE",
+      "bateria": 72,
+      "deltaLatitud": -4.589e-05,
+      "deltaLongitud": -4.604e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-026",
+      "estacionId": "EST-02",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": -0.0,
+      "deltaLongitud": -6.5e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-027",
+      "estacionId": "EST-02",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": 4.589e-05,
+      "deltaLongitud": -4.604e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-028",
+      "estacionId": "EST-03",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": 6.5e-05,
+      "deltaLongitud": 0.0,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-029",
+      "estacionId": "EST-03",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": 4.589e-05,
+      "deltaLongitud": 4.603e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-030",
+      "estacionId": "EST-03",
+      "estado": "DISPONIBLE",
+      "bateria": 56,
+      "deltaLatitud": 0.0,
+      "deltaLongitud": 6.5e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-031",
+      "estacionId": "EST-03",
+      "estado": "DISPONIBLE",
+      "bateria": 63,
+      "deltaLatitud": -4.589e-05,
+      "deltaLongitud": 4.603e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-032",
+      "estacionId": "EST-03",
+      "estado": "DISPONIBLE",
+      "bateria": 70,
+      "deltaLatitud": -6.5e-05,
+      "deltaLongitud": 0.0,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-033",
+      "estacionId": "EST-03",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": -4.589e-05,
+      "deltaLongitud": -4.603e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-034",
+      "estacionId": "EST-03",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": -0.0,
+      "deltaLongitud": -6.5e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-035",
+      "estacionId": "EST-03",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": 4.589e-05,
+      "deltaLongitud": -4.603e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-036",
+      "estacionId": "EST-04",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": 6.5e-05,
+      "deltaLongitud": 0.0,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-037",
+      "estacionId": "EST-04",
+      "estado": "DISPONIBLE",
+      "bateria": 54,
+      "deltaLatitud": 4.589e-05,
+      "deltaLongitud": 4.603e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-038",
+      "estacionId": "EST-04",
+      "estado": "DISPONIBLE",
+      "bateria": 61,
+      "deltaLatitud": 0.0,
+      "deltaLongitud": 6.5e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-039",
+      "estacionId": "EST-04",
+      "estado": "DISPONIBLE",
+      "bateria": 68,
+      "deltaLatitud": -4.589e-05,
+      "deltaLongitud": 4.603e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-040",
+      "estacionId": "EST-04",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": -6.5e-05,
+      "deltaLongitud": 0.0,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-041",
+      "estacionId": "EST-04",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": -4.589e-05,
+      "deltaLongitud": -4.603e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-042",
+      "estacionId": "EST-04",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": -0.0,
+      "deltaLongitud": -6.5e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-043",
+      "estacionId": "EST-04",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": 4.589e-05,
+      "deltaLongitud": -4.603e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-044",
+      "estacionId": "EST-05",
+      "estado": "DISPONIBLE",
+      "bateria": 52,
+      "deltaLatitud": 6.5e-05,
+      "deltaLongitud": 0.0,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-045",
+      "estacionId": "EST-05",
+      "estado": "DISPONIBLE",
+      "bateria": 59,
+      "deltaLatitud": 4.973e-05,
+      "deltaLongitud": 4.186e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-046",
+      "estacionId": "EST-05",
+      "estado": "DISPONIBLE",
+      "bateria": 66,
+      "deltaLatitud": 1.125e-05,
+      "deltaLongitud": 6.402e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-047",
+      "estacionId": "EST-05",
+      "estado": "DISPONIBLE",
+      "bateria": 73,
+      "deltaLatitud": -3.242e-05,
+      "deltaLongitud": 5.634e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-048",
+      "estacionId": "EST-05",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": -6.106e-05,
+      "deltaLongitud": 2.229e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-049",
+      "estacionId": "EST-05",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": -6.106e-05,
+      "deltaLongitud": -2.229e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-050",
+      "estacionId": "EST-05",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": -3.242e-05,
+      "deltaLongitud": -5.634e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-051",
+      "estacionId": "EST-05",
+      "estado": "DISPONIBLE",
+      "bateria": 50,
+      "deltaLatitud": 1.125e-05,
+      "deltaLongitud": -6.402e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-052",
+      "estacionId": "EST-05",
+      "estado": "DISPONIBLE",
+      "bateria": 57,
+      "deltaLatitud": 4.973e-05,
+      "deltaLongitud": -4.186e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-053",
+      "estacionId": "EST-06",
+      "estado": "DISPONIBLE",
+      "bateria": 64,
+      "deltaLatitud": 6.5e-05,
+      "deltaLongitud": 0.0,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-054",
+      "estacionId": "EST-06",
+      "estado": "DISPONIBLE",
+      "bateria": 71,
+      "deltaLatitud": 4.589e-05,
+      "deltaLongitud": 4.603e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-055",
+      "estacionId": "EST-06",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": 0.0,
+      "deltaLongitud": 6.5e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-056",
+      "estacionId": "EST-06",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": -4.589e-05,
+      "deltaLongitud": 4.603e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-057",
+      "estacionId": "EST-06",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": -6.5e-05,
+      "deltaLongitud": 0.0,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-058",
+      "estacionId": "EST-06",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": -4.589e-05,
+      "deltaLongitud": -4.603e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-059",
+      "estacionId": "EST-06",
+      "estado": "DISPONIBLE",
+      "bateria": 55,
+      "deltaLatitud": -0.0,
+      "deltaLongitud": -6.5e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-060",
+      "estacionId": "EST-06",
+      "estado": "DISPONIBLE",
+      "bateria": 62,
+      "deltaLatitud": 4.589e-05,
+      "deltaLongitud": -4.603e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-061",
+      "estacionId": "EST-07",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": -1.984e-05,
+      "deltaLongitud": -1.399e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-062",
+      "estacionId": "EST-07",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": -1.543e-05,
+      "deltaLongitud": -1.088e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-063",
+      "estacionId": "EST-07",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": -1.102e-05,
+      "deltaLongitud": -7.77e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-064",
+      "estacionId": "EST-07",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": -6.61e-06,
+      "deltaLongitud": -4.66e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-065",
+      "estacionId": "EST-07",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": -2.2e-06,
+      "deltaLongitud": -1.55e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-066",
+      "estacionId": "EST-07",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": 2.2e-06,
+      "deltaLongitud": 1.55e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-067",
+      "estacionId": "EST-07",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": 6.61e-06,
+      "deltaLongitud": 4.66e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-068",
+      "estacionId": "EST-07",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": 1.102e-05,
+      "deltaLongitud": 7.77e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-069",
+      "estacionId": "EST-07",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": 1.543e-05,
+      "deltaLongitud": 1.088e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-070",
+      "estacionId": "EST-07",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": 1.984e-05,
+      "deltaLongitud": 1.399e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-071",
+      "estacionId": "EST-08",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": -1.585e-05,
+      "deltaLongitud": -1.842e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-072",
+      "estacionId": "EST-08",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": -1.233e-05,
+      "deltaLongitud": -1.433e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-073",
+      "estacionId": "EST-08",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": -8.8e-06,
+      "deltaLongitud": -1.023e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-074",
+      "estacionId": "EST-08",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": -5.28e-06,
+      "deltaLongitud": -6.14e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-075",
+      "estacionId": "EST-08",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": -1.76e-06,
+      "deltaLongitud": -2.05e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-076",
+      "estacionId": "EST-08",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": 1.76e-06,
+      "deltaLongitud": 2.05e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-077",
+      "estacionId": "EST-08",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": 5.28e-06,
+      "deltaLongitud": 6.14e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-078",
+      "estacionId": "EST-08",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": 8.8e-06,
+      "deltaLongitud": 1.023e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-079",
+      "estacionId": "EST-08",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": 1.233e-05,
+      "deltaLongitud": 1.433e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-080",
+      "estacionId": "EST-08",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": 1.585e-05,
+      "deltaLongitud": 1.842e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-081",
+      "estacionId": "EST-09",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": -1.809e-05,
+      "deltaLongitud": -1.62e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-082",
+      "estacionId": "EST-09",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": -1.407e-05,
+      "deltaLongitud": -1.26e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-083",
+      "estacionId": "EST-09",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": -1.005e-05,
+      "deltaLongitud": -9e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-084",
+      "estacionId": "EST-09",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": -6.03e-06,
+      "deltaLongitud": -5.4e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-085",
+      "estacionId": "EST-09",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": -2.01e-06,
+      "deltaLongitud": -1.8e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-086",
+      "estacionId": "EST-09",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": 2.01e-06,
+      "deltaLongitud": 1.8e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-087",
+      "estacionId": "EST-09",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": 6.03e-06,
+      "deltaLongitud": 5.4e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-088",
+      "estacionId": "EST-09",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 1.005e-05,
+      "deltaLongitud": 9e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-089",
+      "estacionId": "EST-09",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": 1.407e-05,
+      "deltaLongitud": 1.26e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-090",
+      "estacionId": "EST-09",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": 1.809e-05,
+      "deltaLongitud": 1.62e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-091",
+      "estacionId": "EST-10",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": 1.349e-05,
+      "deltaLongitud": 2.022e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-092",
+      "estacionId": "EST-10",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": 1.049e-05,
+      "deltaLongitud": 1.573e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-093",
+      "estacionId": "EST-10",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": 7.5e-06,
+      "deltaLongitud": 1.123e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-094",
+      "estacionId": "EST-10",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": 4.5e-06,
+      "deltaLongitud": 6.74e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-095",
+      "estacionId": "EST-10",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": 1.5e-06,
+      "deltaLongitud": 2.25e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-096",
+      "estacionId": "EST-10",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": -1.5e-06,
+      "deltaLongitud": -2.25e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-097",
+      "estacionId": "EST-10",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": -4.5e-06,
+      "deltaLongitud": -6.74e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-098",
+      "estacionId": "EST-10",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": -7.5e-06,
+      "deltaLongitud": -1.123e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-099",
+      "estacionId": "EST-10",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": -1.049e-05,
+      "deltaLongitud": -1.573e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-100",
+      "estacionId": "EST-10",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": -1.349e-05,
+      "deltaLongitud": -2.022e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-101",
+      "estacionId": "EST-11",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": 1.611e-05,
+      "deltaLongitud": 1.818e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-102",
+      "estacionId": "EST-11",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": 1.253e-05,
+      "deltaLongitud": 1.414e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-103",
+      "estacionId": "EST-11",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": 8.95e-06,
+      "deltaLongitud": 1.01e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-104",
+      "estacionId": "EST-11",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": 5.37e-06,
+      "deltaLongitud": 6.06e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-105",
+      "estacionId": "EST-11",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": 1.79e-06,
+      "deltaLongitud": 2.02e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-106",
+      "estacionId": "EST-11",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": -1.79e-06,
+      "deltaLongitud": -2.02e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-107",
+      "estacionId": "EST-11",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": -5.37e-06,
+      "deltaLongitud": -6.06e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-108",
+      "estacionId": "EST-11",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": -8.95e-06,
+      "deltaLongitud": -1.01e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-109",
+      "estacionId": "EST-11",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": -1.253e-05,
+      "deltaLongitud": -1.414e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-110",
+      "estacionId": "EST-11",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": -1.611e-05,
+      "deltaLongitud": -1.818e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-111",
+      "estacionId": "EST-12",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": -1.76e-05,
+      "deltaLongitud": -1.674e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-112",
+      "estacionId": "EST-12",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": -1.369e-05,
+      "deltaLongitud": -1.302e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-113",
+      "estacionId": "EST-12",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": -9.78e-06,
+      "deltaLongitud": -9.3e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-114",
+      "estacionId": "EST-12",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": -5.87e-06,
+      "deltaLongitud": -5.58e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-115",
+      "estacionId": "EST-12",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": -1.96e-06,
+      "deltaLongitud": -1.86e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-116",
+      "estacionId": "EST-12",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": 1.96e-06,
+      "deltaLongitud": 1.86e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-117",
+      "estacionId": "EST-12",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": 5.87e-06,
+      "deltaLongitud": 5.58e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-118",
+      "estacionId": "EST-12",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": 9.78e-06,
+      "deltaLongitud": 9.3e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-119",
+      "estacionId": "EST-12",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": 1.369e-05,
+      "deltaLongitud": 1.302e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-120",
+      "estacionId": "EST-12",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": 1.76e-05,
+      "deltaLongitud": 1.674e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-121",
+      "estacionId": "EST-13",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": -5.07e-06,
+      "deltaLongitud": -2.379e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-122",
+      "estacionId": "EST-13",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": -3.94e-06,
+      "deltaLongitud": -1.851e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-123",
+      "estacionId": "EST-13",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": -2.82e-06,
+      "deltaLongitud": -1.322e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-124",
+      "estacionId": "EST-13",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": -1.69e-06,
+      "deltaLongitud": -7.93e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-125",
+      "estacionId": "EST-13",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": -5.6e-07,
+      "deltaLongitud": -2.64e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-126",
+      "estacionId": "EST-13",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": 5.6e-07,
+      "deltaLongitud": 2.64e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-127",
+      "estacionId": "EST-13",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": 1.69e-06,
+      "deltaLongitud": 7.93e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-128",
+      "estacionId": "EST-13",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": 2.82e-06,
+      "deltaLongitud": 1.322e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-129",
+      "estacionId": "EST-13",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": 3.94e-06,
+      "deltaLongitud": 1.851e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-130",
+      "estacionId": "EST-13",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": 5.07e-06,
+      "deltaLongitud": 2.379e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-131",
+      "estacionId": "EST-14",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": -1.291e-05,
+      "deltaLongitud": 2.06e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-132",
+      "estacionId": "EST-14",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": -1.004e-05,
+      "deltaLongitud": 1.602e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-133",
+      "estacionId": "EST-14",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": -7.17e-06,
+      "deltaLongitud": 1.144e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-134",
+      "estacionId": "EST-14",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": -4.3e-06,
+      "deltaLongitud": 6.87e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-135",
+      "estacionId": "EST-14",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": -1.43e-06,
+      "deltaLongitud": 2.29e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-136",
+      "estacionId": "EST-14",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": 1.43e-06,
+      "deltaLongitud": -2.29e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-137",
+      "estacionId": "EST-14",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": 4.3e-06,
+      "deltaLongitud": -6.87e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-138",
+      "estacionId": "EST-14",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": 7.17e-06,
+      "deltaLongitud": -1.144e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-139",
+      "estacionId": "EST-14",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": 1.004e-05,
+      "deltaLongitud": -1.602e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-140",
+      "estacionId": "EST-14",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 1.291e-05,
+      "deltaLongitud": -2.06e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-141",
+      "estacionId": "EST-15",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": -3.48e-06,
+      "deltaLongitud": 2.408e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-142",
+      "estacionId": "EST-15",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": -2.7e-06,
+      "deltaLongitud": 1.873e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-143",
+      "estacionId": "EST-15",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": -1.93e-06,
+      "deltaLongitud": 1.338e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-144",
+      "estacionId": "EST-15",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": -1.16e-06,
+      "deltaLongitud": 8.03e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-145",
+      "estacionId": "EST-15",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": -3.9e-07,
+      "deltaLongitud": 2.68e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-146",
+      "estacionId": "EST-15",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": 3.9e-07,
+      "deltaLongitud": -2.68e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-147",
+      "estacionId": "EST-15",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": 1.16e-06,
+      "deltaLongitud": -8.03e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-148",
+      "estacionId": "EST-15",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": 1.93e-06,
+      "deltaLongitud": -1.338e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-149",
+      "estacionId": "EST-15",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": 2.7e-06,
+      "deltaLongitud": -1.873e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-150",
+      "estacionId": "EST-15",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": 3.48e-06,
+      "deltaLongitud": -2.408e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-151",
+      "estacionId": "EST-16",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": -1.8e-05,
+      "deltaLongitud": 1.631e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-152",
+      "estacionId": "EST-16",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": -1.4e-05,
+      "deltaLongitud": 1.269e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-153",
+      "estacionId": "EST-16",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": -1e-05,
+      "deltaLongitud": 9.06e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-154",
+      "estacionId": "EST-16",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": -6e-06,
+      "deltaLongitud": 5.44e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-155",
+      "estacionId": "EST-16",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": -2e-06,
+      "deltaLongitud": 1.81e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-156",
+      "estacionId": "EST-16",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": 2e-06,
+      "deltaLongitud": -1.81e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-157",
+      "estacionId": "EST-16",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": 6e-06,
+      "deltaLongitud": -5.44e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-158",
+      "estacionId": "EST-16",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": 1e-05,
+      "deltaLongitud": -9.06e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-159",
+      "estacionId": "EST-16",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": 1.4e-05,
+      "deltaLongitud": -1.269e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-160",
+      "estacionId": "EST-16",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": 1.8e-05,
+      "deltaLongitud": -1.631e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-161",
+      "estacionId": "EST-17",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": -1.641e-05,
+      "deltaLongitud": -1.792e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-162",
+      "estacionId": "EST-17",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": -1.276e-05,
+      "deltaLongitud": -1.394e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-163",
+      "estacionId": "EST-17",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": -9.11e-06,
+      "deltaLongitud": -9.96e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-164",
+      "estacionId": "EST-17",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": -5.47e-06,
+      "deltaLongitud": -5.97e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-165",
+      "estacionId": "EST-17",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": -1.82e-06,
+      "deltaLongitud": -1.99e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-166",
+      "estacionId": "EST-17",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 1.82e-06,
+      "deltaLongitud": 1.99e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-167",
+      "estacionId": "EST-17",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": 5.47e-06,
+      "deltaLongitud": 5.97e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-168",
+      "estacionId": "EST-17",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": 9.11e-06,
+      "deltaLongitud": 9.96e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-169",
+      "estacionId": "EST-17",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": 1.276e-05,
+      "deltaLongitud": 1.394e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-170",
+      "estacionId": "EST-17",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": 1.641e-05,
+      "deltaLongitud": 1.792e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-171",
+      "estacionId": "EST-18",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": 1.609e-05,
+      "deltaLongitud": 1.82e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-172",
+      "estacionId": "EST-18",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": 1.252e-05,
+      "deltaLongitud": 1.416e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-173",
+      "estacionId": "EST-18",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": 8.94e-06,
+      "deltaLongitud": 1.011e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-174",
+      "estacionId": "EST-18",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": 5.36e-06,
+      "deltaLongitud": 6.07e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-175",
+      "estacionId": "EST-18",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": 1.79e-06,
+      "deltaLongitud": 2.02e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-176",
+      "estacionId": "EST-18",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": -1.79e-06,
+      "deltaLongitud": -2.02e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-177",
+      "estacionId": "EST-18",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": -5.36e-06,
+      "deltaLongitud": -6.07e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-178",
+      "estacionId": "EST-18",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": -8.94e-06,
+      "deltaLongitud": -1.011e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-179",
+      "estacionId": "EST-18",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": -1.252e-05,
+      "deltaLongitud": -1.416e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-180",
+      "estacionId": "EST-18",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": -1.609e-05,
+      "deltaLongitud": -1.82e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-181",
+      "estacionId": "EST-19",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": -3.07e-06,
+      "deltaLongitud": -2.414e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-182",
+      "estacionId": "EST-19",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": -2.39e-06,
+      "deltaLongitud": -1.877e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-183",
+      "estacionId": "EST-19",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": -1.7e-06,
+      "deltaLongitud": -1.341e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-184",
+      "estacionId": "EST-19",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": -1.02e-06,
+      "deltaLongitud": -8.05e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-185",
+      "estacionId": "EST-19",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": -3.4e-07,
+      "deltaLongitud": -2.68e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-186",
+      "estacionId": "EST-19",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": 3.4e-07,
+      "deltaLongitud": 2.68e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-187",
+      "estacionId": "EST-19",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": 1.02e-06,
+      "deltaLongitud": 8.05e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-188",
+      "estacionId": "EST-19",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": 1.7e-06,
+      "deltaLongitud": 1.341e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-189",
+      "estacionId": "EST-19",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": 2.39e-06,
+      "deltaLongitud": 1.877e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-190",
+      "estacionId": "EST-19",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": 3.07e-06,
+      "deltaLongitud": 2.414e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-191",
+      "estacionId": "EST-20",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": 1.359e-05,
+      "deltaLongitud": -2.015e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-192",
+      "estacionId": "EST-20",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 1.057e-05,
+      "deltaLongitud": -1.567e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-193",
+      "estacionId": "EST-20",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": 7.55e-06,
+      "deltaLongitud": -1.119e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-194",
+      "estacionId": "EST-20",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": 4.53e-06,
+      "deltaLongitud": -6.72e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-195",
+      "estacionId": "EST-20",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": 1.51e-06,
+      "deltaLongitud": -2.24e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-196",
+      "estacionId": "EST-20",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": -1.51e-06,
+      "deltaLongitud": 2.24e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-197",
+      "estacionId": "EST-20",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": -4.53e-06,
+      "deltaLongitud": 6.72e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-198",
+      "estacionId": "EST-20",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": -7.55e-06,
+      "deltaLongitud": 1.119e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-199",
+      "estacionId": "EST-20",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": -1.057e-05,
+      "deltaLongitud": 1.567e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-200",
+      "estacionId": "EST-20",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": -1.359e-05,
+      "deltaLongitud": 2.015e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-201",
+      "estacionId": "EST-21",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": -2.184e-05,
+      "deltaLongitud": -1.057e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-202",
+      "estacionId": "EST-21",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": -1.699e-05,
+      "deltaLongitud": -8.22e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-203",
+      "estacionId": "EST-21",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": -1.214e-05,
+      "deltaLongitud": -5.87e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-204",
+      "estacionId": "EST-21",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": -7.28e-06,
+      "deltaLongitud": -3.52e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-205",
+      "estacionId": "EST-21",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": -2.43e-06,
+      "deltaLongitud": -1.17e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-206",
+      "estacionId": "EST-21",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": 2.43e-06,
+      "deltaLongitud": 1.17e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-207",
+      "estacionId": "EST-21",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": 7.28e-06,
+      "deltaLongitud": 3.52e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-208",
+      "estacionId": "EST-21",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": 1.214e-05,
+      "deltaLongitud": 5.87e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-209",
+      "estacionId": "EST-21",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": 1.699e-05,
+      "deltaLongitud": 8.22e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-210",
+      "estacionId": "EST-21",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": 2.184e-05,
+      "deltaLongitud": 1.057e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-211",
+      "estacionId": "EST-22",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": -2.37e-05,
+      "deltaLongitud": -5.15e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-212",
+      "estacionId": "EST-22",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": -1.844e-05,
+      "deltaLongitud": -4.01e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-213",
+      "estacionId": "EST-22",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": -1.317e-05,
+      "deltaLongitud": -2.86e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-214",
+      "estacionId": "EST-22",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": -7.9e-06,
+      "deltaLongitud": -1.72e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-215",
+      "estacionId": "EST-22",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": -2.63e-06,
+      "deltaLongitud": -5.7e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-216",
+      "estacionId": "EST-22",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": 2.63e-06,
+      "deltaLongitud": 5.7e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-217",
+      "estacionId": "EST-22",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": 7.9e-06,
+      "deltaLongitud": 1.72e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-218",
+      "estacionId": "EST-22",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 1.317e-05,
+      "deltaLongitud": 2.86e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-219",
+      "estacionId": "EST-22",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": 1.844e-05,
+      "deltaLongitud": 4.01e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-220",
+      "estacionId": "EST-22",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": 2.37e-05,
+      "deltaLongitud": 5.15e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-221",
+      "estacionId": "EST-23",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": -2.422e-05,
+      "deltaLongitud": 1.21e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-222",
+      "estacionId": "EST-23",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": -1.884e-05,
+      "deltaLongitud": 9.4e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-223",
+      "estacionId": "EST-23",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": -1.346e-05,
+      "deltaLongitud": 6.7e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-224",
+      "estacionId": "EST-23",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": -8.07e-06,
+      "deltaLongitud": 4e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-225",
+      "estacionId": "EST-23",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": -2.69e-06,
+      "deltaLongitud": 1.3e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-226",
+      "estacionId": "EST-23",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": 2.69e-06,
+      "deltaLongitud": -1.3e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-227",
+      "estacionId": "EST-23",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": 8.07e-06,
+      "deltaLongitud": -4e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-228",
+      "estacionId": "EST-23",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": 1.346e-05,
+      "deltaLongitud": -6.7e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-229",
+      "estacionId": "EST-23",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": 1.884e-05,
+      "deltaLongitud": -9.4e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-230",
+      "estacionId": "EST-23",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": 2.422e-05,
+      "deltaLongitud": -1.21e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-231",
+      "estacionId": "EST-24",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": -2.18e-06,
+      "deltaLongitud": 2.423e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-232",
+      "estacionId": "EST-24",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": -1.7e-06,
+      "deltaLongitud": 1.885e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-233",
+      "estacionId": "EST-24",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": -1.21e-06,
+      "deltaLongitud": 1.346e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-234",
+      "estacionId": "EST-24",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": -7.3e-07,
+      "deltaLongitud": 8.08e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-235",
+      "estacionId": "EST-24",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": -2.4e-07,
+      "deltaLongitud": 2.69e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-236",
+      "estacionId": "EST-24",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": 2.4e-07,
+      "deltaLongitud": -2.69e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-237",
+      "estacionId": "EST-24",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": 7.3e-07,
+      "deltaLongitud": -8.08e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-238",
+      "estacionId": "EST-24",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": 1.21e-06,
+      "deltaLongitud": -1.346e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-239",
+      "estacionId": "EST-24",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": 1.7e-06,
+      "deltaLongitud": -1.885e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-240",
+      "estacionId": "EST-24",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": 2.18e-06,
+      "deltaLongitud": -2.423e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-241",
+      "estacionId": "EST-25",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": 7.44e-06,
+      "deltaLongitud": 2.316e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-242",
+      "estacionId": "EST-25",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": 5.79e-06,
+      "deltaLongitud": 1.801e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-243",
+      "estacionId": "EST-25",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": 4.14e-06,
+      "deltaLongitud": 1.286e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-244",
+      "estacionId": "EST-25",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 2.48e-06,
+      "deltaLongitud": 7.72e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-245",
+      "estacionId": "EST-25",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": 8.3e-07,
+      "deltaLongitud": 2.57e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-246",
+      "estacionId": "EST-25",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": -8.3e-07,
+      "deltaLongitud": -2.57e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-247",
+      "estacionId": "EST-25",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": -2.48e-06,
+      "deltaLongitud": -7.72e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-248",
+      "estacionId": "EST-25",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": -4.14e-06,
+      "deltaLongitud": -1.286e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-249",
+      "estacionId": "EST-25",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": -5.79e-06,
+      "deltaLongitud": -1.801e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-250",
+      "estacionId": "EST-25",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": -7.44e-06,
+      "deltaLongitud": -2.316e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-251",
+      "estacionId": "EST-26",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": 1.932e-05,
+      "deltaLongitud": -1.471e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-252",
+      "estacionId": "EST-26",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": 1.503e-05,
+      "deltaLongitud": -1.144e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-253",
+      "estacionId": "EST-26",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": 1.073e-05,
+      "deltaLongitud": -8.17e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-254",
+      "estacionId": "EST-26",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": 6.44e-06,
+      "deltaLongitud": -4.9e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-255",
+      "estacionId": "EST-26",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": 2.15e-06,
+      "deltaLongitud": -1.63e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-256",
+      "estacionId": "EST-26",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": -2.15e-06,
+      "deltaLongitud": 1.63e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-257",
+      "estacionId": "EST-26",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": -6.44e-06,
+      "deltaLongitud": 4.9e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-258",
+      "estacionId": "EST-26",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": -1.073e-05,
+      "deltaLongitud": 8.17e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-259",
+      "estacionId": "EST-26",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": -1.503e-05,
+      "deltaLongitud": 1.144e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-260",
+      "estacionId": "EST-26",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": -1.932e-05,
+      "deltaLongitud": 1.471e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-261",
+      "estacionId": "EST-27",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": 1.263e-05,
+      "deltaLongitud": -2.077e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-262",
+      "estacionId": "EST-27",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": 9.82e-06,
+      "deltaLongitud": -1.616e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-263",
+      "estacionId": "EST-27",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": 7.02e-06,
+      "deltaLongitud": -1.154e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-264",
+      "estacionId": "EST-27",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": 4.21e-06,
+      "deltaLongitud": -6.92e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-265",
+      "estacionId": "EST-27",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": 1.4e-06,
+      "deltaLongitud": -2.31e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-266",
+      "estacionId": "EST-27",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": -1.4e-06,
+      "deltaLongitud": 2.31e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-267",
+      "estacionId": "EST-27",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": -4.21e-06,
+      "deltaLongitud": 6.92e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-268",
+      "estacionId": "EST-27",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": -7.02e-06,
+      "deltaLongitud": 1.154e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-269",
+      "estacionId": "EST-27",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": -9.82e-06,
+      "deltaLongitud": 1.616e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-270",
+      "estacionId": "EST-27",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": -1.263e-05,
+      "deltaLongitud": 2.077e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-271",
+      "estacionId": "EST-28",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": 2.425e-05,
+      "deltaLongitud": 4.1e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-272",
+      "estacionId": "EST-28",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": 1.886e-05,
+      "deltaLongitud": 3.2e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-273",
+      "estacionId": "EST-28",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": 1.347e-05,
+      "deltaLongitud": 2.3e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-274",
+      "estacionId": "EST-28",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": 8.08e-06,
+      "deltaLongitud": 1.4e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-275",
+      "estacionId": "EST-28",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": 2.69e-06,
+      "deltaLongitud": 5e-08,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-276",
+      "estacionId": "EST-28",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": -2.69e-06,
+      "deltaLongitud": -5e-08,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-277",
+      "estacionId": "EST-28",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": -8.08e-06,
+      "deltaLongitud": -1.4e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-278",
+      "estacionId": "EST-28",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": -1.347e-05,
+      "deltaLongitud": -2.3e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-279",
+      "estacionId": "EST-28",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": -1.886e-05,
+      "deltaLongitud": -3.2e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-280",
+      "estacionId": "EST-28",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": -2.425e-05,
+      "deltaLongitud": -4.1e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-281",
+      "estacionId": "EST-29",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": 1.91e-05,
+      "deltaLongitud": 1.5e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-282",
+      "estacionId": "EST-29",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": 1.485e-05,
+      "deltaLongitud": 1.167e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-283",
+      "estacionId": "EST-29",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": 1.061e-05,
+      "deltaLongitud": 8.33e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-284",
+      "estacionId": "EST-29",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": 6.37e-06,
+      "deltaLongitud": 5e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-285",
+      "estacionId": "EST-29",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": 2.12e-06,
+      "deltaLongitud": 1.67e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-286",
+      "estacionId": "EST-29",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": -2.12e-06,
+      "deltaLongitud": -1.67e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-287",
+      "estacionId": "EST-29",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": -6.37e-06,
+      "deltaLongitud": -5e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-288",
+      "estacionId": "EST-29",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": -1.061e-05,
+      "deltaLongitud": -8.33e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-289",
+      "estacionId": "EST-29",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": -1.485e-05,
+      "deltaLongitud": -1.167e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-290",
+      "estacionId": "EST-29",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": -1.91e-05,
+      "deltaLongitud": -1.5e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-291",
+      "estacionId": "EST-30",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": 4.86e-06,
+      "deltaLongitud": -2.384e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-292",
+      "estacionId": "EST-30",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": 3.78e-06,
+      "deltaLongitud": -1.854e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-293",
+      "estacionId": "EST-30",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": 2.7e-06,
+      "deltaLongitud": -1.324e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-294",
+      "estacionId": "EST-30",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": 1.62e-06,
+      "deltaLongitud": -7.95e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-295",
+      "estacionId": "EST-30",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": 5.4e-07,
+      "deltaLongitud": -2.65e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-296",
+      "estacionId": "EST-30",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": -5.4e-07,
+      "deltaLongitud": 2.65e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-297",
+      "estacionId": "EST-30",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": -1.62e-06,
+      "deltaLongitud": 7.95e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-298",
+      "estacionId": "EST-30",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": -2.7e-06,
+      "deltaLongitud": 1.324e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-299",
+      "estacionId": "EST-30",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": -3.78e-06,
+      "deltaLongitud": 1.854e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-300",
+      "estacionId": "EST-30",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": -4.86e-06,
+      "deltaLongitud": 2.384e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-301",
+      "estacionId": "EST-31",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": 7.49e-06,
+      "deltaLongitud": 2.314e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-302",
+      "estacionId": "EST-31",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": 5.83e-06,
+      "deltaLongitud": 1.8e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-303",
+      "estacionId": "EST-31",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": 4.16e-06,
+      "deltaLongitud": 1.286e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-304",
+      "estacionId": "EST-31",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": 2.5e-06,
+      "deltaLongitud": 7.71e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-305",
+      "estacionId": "EST-31",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": 8.3e-07,
+      "deltaLongitud": 2.57e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-306",
+      "estacionId": "EST-31",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": -8.3e-07,
+      "deltaLongitud": -2.57e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-307",
+      "estacionId": "EST-31",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": -2.5e-06,
+      "deltaLongitud": -7.71e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-308",
+      "estacionId": "EST-31",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": -4.16e-06,
+      "deltaLongitud": -1.286e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-309",
+      "estacionId": "EST-31",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": -5.83e-06,
+      "deltaLongitud": -1.8e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-310",
+      "estacionId": "EST-31",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": -7.49e-06,
+      "deltaLongitud": -2.314e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-311",
+      "estacionId": "EST-32",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": 1.172e-05,
+      "deltaLongitud": 2.13e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-312",
+      "estacionId": "EST-32",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": 9.12e-06,
+      "deltaLongitud": 1.657e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-313",
+      "estacionId": "EST-32",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": 6.51e-06,
+      "deltaLongitud": 1.183e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-314",
+      "estacionId": "EST-32",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": 3.91e-06,
+      "deltaLongitud": 7.1e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-315",
+      "estacionId": "EST-32",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": 1.3e-06,
+      "deltaLongitud": 2.37e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-316",
+      "estacionId": "EST-32",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": -1.3e-06,
+      "deltaLongitud": -2.37e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-317",
+      "estacionId": "EST-32",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": -3.91e-06,
+      "deltaLongitud": -7.1e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-318",
+      "estacionId": "EST-32",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": -6.51e-06,
+      "deltaLongitud": -1.183e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-319",
+      "estacionId": "EST-32",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": -9.12e-06,
+      "deltaLongitud": -1.657e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-320",
+      "estacionId": "EST-32",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": -1.172e-05,
+      "deltaLongitud": -2.13e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-321",
+      "estacionId": "EST-33",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": 3.3e-07,
+      "deltaLongitud": 2.433e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-322",
+      "estacionId": "EST-33",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 2.6e-07,
+      "deltaLongitud": 1.892e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-323",
+      "estacionId": "EST-33",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": 1.8e-07,
+      "deltaLongitud": 1.352e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-324",
+      "estacionId": "EST-33",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": 1.1e-07,
+      "deltaLongitud": 8.11e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-325",
+      "estacionId": "EST-33",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": 4e-08,
+      "deltaLongitud": 2.7e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-326",
+      "estacionId": "EST-33",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": -4e-08,
+      "deltaLongitud": -2.7e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-327",
+      "estacionId": "EST-33",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": -1.1e-07,
+      "deltaLongitud": -8.11e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-328",
+      "estacionId": "EST-33",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": -1.8e-07,
+      "deltaLongitud": -1.352e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-329",
+      "estacionId": "EST-33",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": -2.6e-07,
+      "deltaLongitud": -1.892e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-330",
+      "estacionId": "EST-33",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": -3.3e-07,
+      "deltaLongitud": -2.433e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-331",
+      "estacionId": "EST-34",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": 2.89e-06,
+      "deltaLongitud": 2.416e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-332",
+      "estacionId": "EST-34",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": 2.25e-06,
+      "deltaLongitud": 1.879e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-333",
+      "estacionId": "EST-34",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": 1.61e-06,
+      "deltaLongitud": 1.342e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-334",
+      "estacionId": "EST-34",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": 9.6e-07,
+      "deltaLongitud": 8.05e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-335",
+      "estacionId": "EST-34",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": 3.2e-07,
+      "deltaLongitud": 2.68e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-336",
+      "estacionId": "EST-34",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": -3.2e-07,
+      "deltaLongitud": -2.68e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-337",
+      "estacionId": "EST-34",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": -9.6e-07,
+      "deltaLongitud": -8.05e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-338",
+      "estacionId": "EST-34",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": -1.61e-06,
+      "deltaLongitud": -1.342e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-339",
+      "estacionId": "EST-34",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": -2.25e-06,
+      "deltaLongitud": -1.879e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-340",
+      "estacionId": "EST-34",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": -2.89e-06,
+      "deltaLongitud": -2.416e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-341",
+      "estacionId": "EST-35",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": 2.398e-05,
+      "deltaLongitud": -3.64e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-342",
+      "estacionId": "EST-35",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": 1.865e-05,
+      "deltaLongitud": -2.83e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-343",
+      "estacionId": "EST-35",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": 1.332e-05,
+      "deltaLongitud": -2.02e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-344",
+      "estacionId": "EST-35",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": 7.99e-06,
+      "deltaLongitud": -1.21e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-345",
+      "estacionId": "EST-35",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": 2.66e-06,
+      "deltaLongitud": -4e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-346",
+      "estacionId": "EST-35",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": -2.66e-06,
+      "deltaLongitud": 4e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-347",
+      "estacionId": "EST-35",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": -7.99e-06,
+      "deltaLongitud": 1.21e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-348",
+      "estacionId": "EST-35",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": -1.332e-05,
+      "deltaLongitud": 2.02e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-349",
+      "estacionId": "EST-35",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": -1.865e-05,
+      "deltaLongitud": 2.83e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-350",
+      "estacionId": "EST-35",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": -2.398e-05,
+      "deltaLongitud": 3.64e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-351",
+      "estacionId": "EST-36",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": -1.782e-05,
+      "deltaLongitud": 1.651e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-352",
+      "estacionId": "EST-36",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": -1.386e-05,
+      "deltaLongitud": 1.284e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-353",
+      "estacionId": "EST-36",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": -9.9e-06,
+      "deltaLongitud": 9.17e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-354",
+      "estacionId": "EST-36",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": -5.94e-06,
+      "deltaLongitud": 5.5e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-355",
+      "estacionId": "EST-36",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": -1.98e-06,
+      "deltaLongitud": 1.83e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-356",
+      "estacionId": "EST-36",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": 1.98e-06,
+      "deltaLongitud": -1.83e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-357",
+      "estacionId": "EST-36",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": 5.94e-06,
+      "deltaLongitud": -5.5e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-358",
+      "estacionId": "EST-36",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": 9.9e-06,
+      "deltaLongitud": -9.17e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-359",
+      "estacionId": "EST-36",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": 1.386e-05,
+      "deltaLongitud": -1.284e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-360",
+      "estacionId": "EST-36",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": 1.782e-05,
+      "deltaLongitud": -1.651e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-361",
+      "estacionId": "EST-37",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": -5.81e-06,
+      "deltaLongitud": 2.362e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-362",
+      "estacionId": "EST-37",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": -4.52e-06,
+      "deltaLongitud": 1.837e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-363",
+      "estacionId": "EST-37",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": -3.23e-06,
+      "deltaLongitud": 1.312e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-364",
+      "estacionId": "EST-37",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": -1.94e-06,
+      "deltaLongitud": 7.87e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-365",
+      "estacionId": "EST-37",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": -6.5e-07,
+      "deltaLongitud": 2.62e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-366",
+      "estacionId": "EST-37",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": 6.5e-07,
+      "deltaLongitud": -2.62e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-367",
+      "estacionId": "EST-37",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": 1.94e-06,
+      "deltaLongitud": -7.87e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-368",
+      "estacionId": "EST-37",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": 3.23e-06,
+      "deltaLongitud": -1.312e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-369",
+      "estacionId": "EST-37",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": 4.52e-06,
+      "deltaLongitud": -1.837e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-370",
+      "estacionId": "EST-37",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": 5.81e-06,
+      "deltaLongitud": -2.362e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-371",
+      "estacionId": "EST-38",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": 1.626e-05,
+      "deltaLongitud": 1.805e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-372",
+      "estacionId": "EST-38",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": 1.265e-05,
+      "deltaLongitud": 1.404e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-373",
+      "estacionId": "EST-38",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": 9.04e-06,
+      "deltaLongitud": 1.003e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-374",
+      "estacionId": "EST-38",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 5.42e-06,
+      "deltaLongitud": 6.02e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-375",
+      "estacionId": "EST-38",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": 1.81e-06,
+      "deltaLongitud": 2.01e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-376",
+      "estacionId": "EST-38",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": -1.81e-06,
+      "deltaLongitud": -2.01e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-377",
+      "estacionId": "EST-38",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": -5.42e-06,
+      "deltaLongitud": -6.02e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-378",
+      "estacionId": "EST-38",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": -9.04e-06,
+      "deltaLongitud": -1.003e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-379",
+      "estacionId": "EST-38",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": -1.265e-05,
+      "deltaLongitud": -1.404e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-380",
+      "estacionId": "EST-38",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": -1.626e-05,
+      "deltaLongitud": -1.805e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-381",
+      "estacionId": "EST-39",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": 8.47e-06,
+      "deltaLongitud": -2.28e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-382",
+      "estacionId": "EST-39",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": 6.59e-06,
+      "deltaLongitud": -1.773e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-383",
+      "estacionId": "EST-39",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": 4.71e-06,
+      "deltaLongitud": -1.267e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-384",
+      "estacionId": "EST-39",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": 2.82e-06,
+      "deltaLongitud": -7.6e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-385",
+      "estacionId": "EST-39",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": 9.4e-07,
+      "deltaLongitud": -2.53e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-386",
+      "estacionId": "EST-39",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": -9.4e-07,
+      "deltaLongitud": 2.53e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-387",
+      "estacionId": "EST-39",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": -2.82e-06,
+      "deltaLongitud": 7.6e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-388",
+      "estacionId": "EST-39",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": -4.71e-06,
+      "deltaLongitud": 1.267e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-389",
+      "estacionId": "EST-39",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": -6.59e-06,
+      "deltaLongitud": 1.773e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-390",
+      "estacionId": "EST-39",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": -8.47e-06,
+      "deltaLongitud": 2.28e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-391",
+      "estacionId": "EST-40",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": -2.385e-05,
+      "deltaLongitud": 4.41e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-392",
+      "estacionId": "EST-40",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": -1.855e-05,
+      "deltaLongitud": 3.43e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-393",
+      "estacionId": "EST-40",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": -1.325e-05,
+      "deltaLongitud": 2.45e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-394",
+      "estacionId": "EST-40",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": -7.95e-06,
+      "deltaLongitud": 1.47e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-395",
+      "estacionId": "EST-40",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": -2.65e-06,
+      "deltaLongitud": 4.9e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-396",
+      "estacionId": "EST-40",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": 2.65e-06,
+      "deltaLongitud": -4.9e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-397",
+      "estacionId": "EST-40",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": 7.95e-06,
+      "deltaLongitud": -1.47e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-398",
+      "estacionId": "EST-40",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": 1.325e-05,
+      "deltaLongitud": -2.45e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-399",
+      "estacionId": "EST-40",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": 1.855e-05,
+      "deltaLongitud": -3.43e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-400",
+      "estacionId": "EST-40",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 2.385e-05,
+      "deltaLongitud": -4.41e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-401",
+      "estacionId": "EST-41",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": -4.3e-06,
+      "deltaLongitud": 2.395e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-402",
+      "estacionId": "EST-41",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": -3.35e-06,
+      "deltaLongitud": 1.862e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-403",
+      "estacionId": "EST-41",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": -2.39e-06,
+      "deltaLongitud": 1.33e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-404",
+      "estacionId": "EST-41",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": -1.43e-06,
+      "deltaLongitud": 7.98e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-405",
+      "estacionId": "EST-41",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": -4.8e-07,
+      "deltaLongitud": 2.66e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-406",
+      "estacionId": "EST-41",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": 4.8e-07,
+      "deltaLongitud": -2.66e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-407",
+      "estacionId": "EST-41",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": 1.43e-06,
+      "deltaLongitud": -7.98e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-408",
+      "estacionId": "EST-41",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": 2.39e-06,
+      "deltaLongitud": -1.33e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-409",
+      "estacionId": "EST-41",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": 3.35e-06,
+      "deltaLongitud": -1.862e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-410",
+      "estacionId": "EST-41",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": 4.3e-06,
+      "deltaLongitud": -2.395e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-411",
+      "estacionId": "EST-42",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": 2.1e-06,
+      "deltaLongitud": 2.424e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-412",
+      "estacionId": "EST-42",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": 1.63e-06,
+      "deltaLongitud": 1.885e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-413",
+      "estacionId": "EST-42",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": 1.16e-06,
+      "deltaLongitud": 1.347e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-414",
+      "estacionId": "EST-42",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": 7e-07,
+      "deltaLongitud": 8.08e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-415",
+      "estacionId": "EST-42",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": 2.3e-07,
+      "deltaLongitud": 2.69e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-416",
+      "estacionId": "EST-42",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": -2.3e-07,
+      "deltaLongitud": -2.69e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-417",
+      "estacionId": "EST-42",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": -7e-07,
+      "deltaLongitud": -8.08e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-418",
+      "estacionId": "EST-42",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": -1.16e-06,
+      "deltaLongitud": -1.347e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-419",
+      "estacionId": "EST-42",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": -1.63e-06,
+      "deltaLongitud": -1.885e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-420",
+      "estacionId": "EST-42",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": -2.1e-06,
+      "deltaLongitud": -2.424e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-421",
+      "estacionId": "EST-43",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": -2.41e-05,
+      "deltaLongitud": -2.76e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-422",
+      "estacionId": "EST-43",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": -1.874e-05,
+      "deltaLongitud": -2.15e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-423",
+      "estacionId": "EST-43",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": -1.339e-05,
+      "deltaLongitud": -1.54e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-424",
+      "estacionId": "EST-43",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": -8.03e-06,
+      "deltaLongitud": -9.2e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-425",
+      "estacionId": "EST-43",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": -2.68e-06,
+      "deltaLongitud": -3.1e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-426",
+      "estacionId": "EST-43",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 2.68e-06,
+      "deltaLongitud": 3.1e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-427",
+      "estacionId": "EST-43",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": 8.03e-06,
+      "deltaLongitud": 9.2e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-428",
+      "estacionId": "EST-43",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": 1.339e-05,
+      "deltaLongitud": 1.54e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-429",
+      "estacionId": "EST-43",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": 1.874e-05,
+      "deltaLongitud": 2.15e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-430",
+      "estacionId": "EST-43",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": 2.41e-05,
+      "deltaLongitud": 2.76e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-431",
+      "estacionId": "EST-44",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": 1.426e-05,
+      "deltaLongitud": 1.968e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-432",
+      "estacionId": "EST-44",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": 1.109e-05,
+      "deltaLongitud": 1.531e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-433",
+      "estacionId": "EST-44",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": 7.92e-06,
+      "deltaLongitud": 1.094e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-434",
+      "estacionId": "EST-44",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": 4.75e-06,
+      "deltaLongitud": 6.56e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-435",
+      "estacionId": "EST-44",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": 1.58e-06,
+      "deltaLongitud": 2.19e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-436",
+      "estacionId": "EST-44",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": -1.58e-06,
+      "deltaLongitud": -2.19e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-437",
+      "estacionId": "EST-44",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": -4.75e-06,
+      "deltaLongitud": -6.56e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-438",
+      "estacionId": "EST-44",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": -7.92e-06,
+      "deltaLongitud": -1.094e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-439",
+      "estacionId": "EST-44",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": -1.109e-05,
+      "deltaLongitud": -1.531e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-440",
+      "estacionId": "EST-44",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": -1.426e-05,
+      "deltaLongitud": -1.968e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-441",
+      "estacionId": "EST-45",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": 1.729e-05,
+      "deltaLongitud": 1.707e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-442",
+      "estacionId": "EST-45",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": 1.344e-05,
+      "deltaLongitud": 1.327e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-443",
+      "estacionId": "EST-45",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": 9.6e-06,
+      "deltaLongitud": 9.48e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-444",
+      "estacionId": "EST-45",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": 5.76e-06,
+      "deltaLongitud": 5.69e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-445",
+      "estacionId": "EST-45",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": 1.92e-06,
+      "deltaLongitud": 1.9e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-446",
+      "estacionId": "EST-45",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": -1.92e-06,
+      "deltaLongitud": -1.9e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-447",
+      "estacionId": "EST-45",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": -5.76e-06,
+      "deltaLongitud": -5.69e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-448",
+      "estacionId": "EST-45",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": -9.6e-06,
+      "deltaLongitud": -9.48e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-449",
+      "estacionId": "EST-45",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": -1.344e-05,
+      "deltaLongitud": -1.327e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-450",
+      "estacionId": "EST-45",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": -1.729e-05,
+      "deltaLongitud": -1.707e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-451",
+      "estacionId": "EST-46",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": -1.048e-05,
+      "deltaLongitud": -2.194e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-452",
+      "estacionId": "EST-46",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": -8.15e-06,
+      "deltaLongitud": -1.707e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-453",
+      "estacionId": "EST-46",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": -5.82e-06,
+      "deltaLongitud": -1.219e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-454",
+      "estacionId": "EST-46",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": -3.49e-06,
+      "deltaLongitud": -7.31e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-455",
+      "estacionId": "EST-46",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": -1.16e-06,
+      "deltaLongitud": -2.44e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-456",
+      "estacionId": "EST-46",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": 1.16e-06,
+      "deltaLongitud": 2.44e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-457",
+      "estacionId": "EST-46",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": 3.49e-06,
+      "deltaLongitud": 7.31e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-458",
+      "estacionId": "EST-46",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": 5.82e-06,
+      "deltaLongitud": 1.219e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-459",
+      "estacionId": "EST-46",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": 8.15e-06,
+      "deltaLongitud": 1.707e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-460",
+      "estacionId": "EST-46",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": 1.048e-05,
+      "deltaLongitud": 2.194e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-461",
+      "estacionId": "EST-47",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": 2.365e-05,
+      "deltaLongitud": 5.39e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-462",
+      "estacionId": "EST-47",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": 1.84e-05,
+      "deltaLongitud": 4.19e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-463",
+      "estacionId": "EST-47",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": 1.314e-05,
+      "deltaLongitud": 3e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-464",
+      "estacionId": "EST-47",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": 7.88e-06,
+      "deltaLongitud": 1.8e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-465",
+      "estacionId": "EST-47",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": 2.63e-06,
+      "deltaLongitud": 6e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-466",
+      "estacionId": "EST-47",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": -2.63e-06,
+      "deltaLongitud": -6e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-467",
+      "estacionId": "EST-47",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": -7.88e-06,
+      "deltaLongitud": -1.8e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-468",
+      "estacionId": "EST-47",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": -1.314e-05,
+      "deltaLongitud": -3e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-469",
+      "estacionId": "EST-47",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": -1.84e-05,
+      "deltaLongitud": -4.19e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-470",
+      "estacionId": "EST-47",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": -2.365e-05,
+      "deltaLongitud": -5.39e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-471",
+      "estacionId": "EST-48",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": -2.386e-05,
+      "deltaLongitud": 4.35e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-472",
+      "estacionId": "EST-48",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": -1.856e-05,
+      "deltaLongitud": 3.38e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-473",
+      "estacionId": "EST-48",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": -1.326e-05,
+      "deltaLongitud": 2.41e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-474",
+      "estacionId": "EST-48",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": -7.95e-06,
+      "deltaLongitud": 1.45e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-475",
+      "estacionId": "EST-48",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": -2.65e-06,
+      "deltaLongitud": 4.8e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-476",
+      "estacionId": "EST-48",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": 2.65e-06,
+      "deltaLongitud": -4.8e-07,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-477",
+      "estacionId": "EST-48",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": 7.95e-06,
+      "deltaLongitud": -1.45e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-478",
+      "estacionId": "EST-48",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 1.326e-05,
+      "deltaLongitud": -2.41e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-479",
+      "estacionId": "EST-48",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": 1.856e-05,
+      "deltaLongitud": -3.38e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-480",
+      "estacionId": "EST-48",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": 2.386e-05,
+      "deltaLongitud": -4.35e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-481",
+      "estacionId": "EST-49",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": 1.963e-05,
+      "deltaLongitud": 1.429e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-482",
+      "estacionId": "EST-49",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": 1.527e-05,
+      "deltaLongitud": 1.111e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-483",
+      "estacionId": "EST-49",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": 1.091e-05,
+      "deltaLongitud": 7.94e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-484",
+      "estacionId": "EST-49",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": 6.54e-06,
+      "deltaLongitud": 4.76e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-485",
+      "estacionId": "EST-49",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": 2.18e-06,
+      "deltaLongitud": 1.59e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-486",
+      "estacionId": "EST-49",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": -2.18e-06,
+      "deltaLongitud": -1.59e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-487",
+      "estacionId": "EST-49",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": -6.54e-06,
+      "deltaLongitud": -4.76e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-488",
+      "estacionId": "EST-49",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": -1.091e-05,
+      "deltaLongitud": -7.94e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-489",
+      "estacionId": "EST-49",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": -1.527e-05,
+      "deltaLongitud": -1.111e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-490",
+      "estacionId": "EST-49",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": -1.963e-05,
+      "deltaLongitud": -1.429e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-491",
+      "estacionId": "EST-50",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": -2.23e-05,
+      "deltaLongitud": -9.56e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-492",
+      "estacionId": "EST-50",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": -1.735e-05,
+      "deltaLongitud": -7.44e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-493",
+      "estacionId": "EST-50",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": -1.239e-05,
+      "deltaLongitud": -5.31e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-494",
+      "estacionId": "EST-50",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": -7.43e-06,
+      "deltaLongitud": -3.19e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-495",
+      "estacionId": "EST-50",
+      "estado": "DISPONIBLE",
+      "bateria": 76,
+      "deltaLatitud": -2.48e-06,
+      "deltaLongitud": -1.06e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-496",
+      "estacionId": "EST-50",
+      "estado": "DISPONIBLE",
+      "bateria": 77,
+      "deltaLatitud": 2.48e-06,
+      "deltaLongitud": 1.06e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-497",
+      "estacionId": "EST-50",
+      "estado": "DISPONIBLE",
+      "bateria": 78,
+      "deltaLatitud": 7.43e-06,
+      "deltaLongitud": 3.19e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-498",
+      "estacionId": "EST-50",
+      "estado": "DISPONIBLE",
+      "bateria": 79,
+      "deltaLatitud": 1.239e-05,
+      "deltaLongitud": 5.31e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-499",
+      "estacionId": "EST-50",
+      "estado": "DISPONIBLE",
+      "bateria": 80,
+      "deltaLatitud": 1.735e-05,
+      "deltaLongitud": 7.44e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-500",
+      "estacionId": "EST-50",
+      "estado": "DISPONIBLE",
+      "bateria": 81,
+      "deltaLatitud": 2.23e-05,
+      "deltaLongitud": 9.56e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-501",
+      "estacionId": "EST-51",
+      "estado": "DISPONIBLE",
+      "bateria": 82,
+      "deltaLatitud": 1.504e-05,
+      "deltaLongitud": 1.909e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-502",
+      "estacionId": "EST-51",
+      "estado": "DISPONIBLE",
+      "bateria": 83,
+      "deltaLatitud": 1.17e-05,
+      "deltaLongitud": 1.484e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-503",
+      "estacionId": "EST-51",
+      "estado": "DISPONIBLE",
+      "bateria": 84,
+      "deltaLatitud": 8.36e-06,
+      "deltaLongitud": 1.06e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-504",
+      "estacionId": "EST-51",
+      "estado": "DISPONIBLE",
+      "bateria": 85,
+      "deltaLatitud": 5.01e-06,
+      "deltaLongitud": 6.36e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-505",
+      "estacionId": "EST-51",
+      "estado": "DISPONIBLE",
+      "bateria": 86,
+      "deltaLatitud": 1.67e-06,
+      "deltaLongitud": 2.12e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-506",
+      "estacionId": "EST-51",
+      "estado": "DISPONIBLE",
+      "bateria": 87,
+      "deltaLatitud": -1.67e-06,
+      "deltaLongitud": -2.12e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-507",
+      "estacionId": "EST-51",
+      "estado": "DISPONIBLE",
+      "bateria": 88,
+      "deltaLatitud": -5.01e-06,
+      "deltaLongitud": -6.36e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-508",
+      "estacionId": "EST-51",
+      "estado": "DISPONIBLE",
+      "bateria": 89,
+      "deltaLatitud": -8.36e-06,
+      "deltaLongitud": -1.06e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-509",
+      "estacionId": "EST-51",
+      "estado": "DISPONIBLE",
+      "bateria": 90,
+      "deltaLatitud": -1.17e-05,
+      "deltaLongitud": -1.484e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-510",
+      "estacionId": "EST-51",
+      "estado": "DISPONIBLE",
+      "bateria": 91,
+      "deltaLatitud": -1.504e-05,
+      "deltaLongitud": -1.909e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-511",
+      "estacionId": "EST-52",
+      "estado": "DISPONIBLE",
+      "bateria": 92,
+      "deltaLatitud": -8.07e-06,
+      "deltaLongitud": -2.295e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-512",
+      "estacionId": "EST-52",
+      "estado": "DISPONIBLE",
+      "bateria": 93,
+      "deltaLatitud": -6.27e-06,
+      "deltaLongitud": -1.785e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-513",
+      "estacionId": "EST-52",
+      "estado": "DISPONIBLE",
+      "bateria": 94,
+      "deltaLatitud": -4.48e-06,
+      "deltaLongitud": -1.275e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-514",
+      "estacionId": "EST-52",
+      "estado": "DISPONIBLE",
+      "bateria": 95,
+      "deltaLatitud": -2.69e-06,
+      "deltaLongitud": -7.65e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-515",
+      "estacionId": "EST-52",
+      "estado": "DISPONIBLE",
+      "bateria": 96,
+      "deltaLatitud": -9e-07,
+      "deltaLongitud": -2.55e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-516",
+      "estacionId": "EST-52",
+      "estado": "DISPONIBLE",
+      "bateria": 97,
+      "deltaLatitud": 9e-07,
+      "deltaLongitud": 2.55e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-517",
+      "estacionId": "EST-52",
+      "estado": "DISPONIBLE",
+      "bateria": 98,
+      "deltaLatitud": 2.69e-06,
+      "deltaLongitud": 7.65e-06,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-518",
+      "estacionId": "EST-52",
+      "estado": "DISPONIBLE",
+      "bateria": 99,
+      "deltaLatitud": 4.48e-06,
+      "deltaLongitud": 1.275e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-519",
+      "estacionId": "EST-52",
+      "estado": "DISPONIBLE",
+      "bateria": 100,
+      "deltaLatitud": 6.27e-06,
+      "deltaLongitud": 1.785e-05,
+      "candadoConFalla": false
+    },
+    {
+      "id": "BG-520",
+      "estacionId": "EST-52",
+      "estado": "DISPONIBLE",
+      "bateria": 75,
+      "deltaLatitud": 8.07e-06,
+      "deltaLongitud": 2.295e-05,
+      "candadoConFalla": false
+    }
+  ]
+}

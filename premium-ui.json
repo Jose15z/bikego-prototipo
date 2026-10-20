@@ -1,0 +1,22 @@
+{
+  "profile": "product-admin",
+  "sourceRoots": [
+    "frontend/src"
+  ],
+  "locale": "es-CO",
+  "canonicalMap": "UX-CONTRACT.md",
+  "requiredCapabilities": [
+    "Select/Listbox",
+    "Date",
+    "Form",
+    "Scrollbar"
+  ],
+  "ownership": {
+    "Select/Listbox": "native",
+    "Date": "native"
+  },
+  "evidence": {
+    "crudFullFlow": "tests/e2e/registro-pago-legal.cjs",
+    "failurePaths": "tests/e2e/registro-pago-legal.cjs"
+  }
+}

@@ -24,6 +24,11 @@ public class Usuario {
     private String passwordHash;
     private LocalDateTime fechaAceptacionTerminos;
     private String versionTerminos;
+    private LocalDateTime fechaAutorizacionDatos;
+    private String versionPrivacidad;
+    public void autorizarDatos(LocalDateTime fecha, String version) {fechaAutorizacionDatos=fecha;versionPrivacidad=version;}
+    public LocalDateTime getFechaAutorizacionDatos(){return fechaAutorizacionDatos;}
+    public String getVersionPrivacidad(){return versionPrivacidad;}
     private String codigoVerificacionHash;
     private LocalDateTime codigoVerificacionExpira;
 

@@ -13,7 +13,7 @@ export class ApiError extends Error {
   readonly status: number
 
   constructor(status: number, body: ErrorApi) {
-    super(body.mensaje)
+    super(body.mensaje || (status >= 500 ? 'El servidor no pudo completar la solicitud. Conservamos tus datos; vuelve a intentarlo.' : 'Revisa los datos e intenta de nuevo.'))
     this.status = status
     this.codigo = body.codigo
     this.accionSugerida = body.accionSugerida
@@ -34,7 +34,7 @@ async function request<T>(url: string, init?: RequestInit): Promise<T> {
   } catch {
     throw new ApiError(0, {
       codigo: 'SIN_CONEXION',
-      mensaje: 'No hay conexión con el servidor de BikeGo. Revisa que el backend esté corriendo en el puerto 8080.',
+      mensaje: 'No pudimos conectar con BikeGo. Comprueba tu conexión y vuelve a intentarlo.',
       accionSugerida: 'REINTENTAR',
     })
   }

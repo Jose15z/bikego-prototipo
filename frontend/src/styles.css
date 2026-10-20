@@ -228,3 +228,5 @@ summary { cursor:pointer;color:var(--verde);font-size:12px;padding:8px 0; }detai
 @media(prefers-reduced-motion:reduce) { * { animation-duration:.01ms!important;transition:none!important; } }
 @media print { .sidebar,.barra,.pie,.no-imprimir,.banner-viaje { display:none!important; }.app-layout { display:block; }.contenido { padding:0; }.recibo button { display:none; }.recibo-papel { border:0; }.recibo { max-width:none; } }
 .mensaje-contenido { font:inherit;font-size:13px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--fondo);padding:18px;border-radius:10px; }
+
+.marcador-estacion { width:28px; height:28px; border-radius:6px; background:#fff; border:2px solid #174d3f; color:#174d3f; font-size:16px; font-weight:800; display:flex; align-items:center; justify-content:center; box-shadow:0 1px 5px #0003; }

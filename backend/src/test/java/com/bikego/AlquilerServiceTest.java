@@ -70,7 +70,7 @@ class AlquilerServiceTest {
     @DisplayName("CA-7 tras el desbloqueo la bicicleta ya no aparece en el mapa")
     void desapareceDelMapa() {
         alquiler.iniciar("U-001", "BG-001", "BIKEGO:BG-001");
-        assertThat(disponibilidad.buscarCercanas(4.53389, -75.68111, 1000).bicicletas())
+        assertThat(disponibilidad.buscarCercanas(4.5325, -75.6736, 1000).bicicletas())
                 .noneMatch(b -> b.id().equals("BG-001"));
     }
 

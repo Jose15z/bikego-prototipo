@@ -26,7 +26,7 @@ import java.util.UUID;
 @Service
 public class AutenticacionService {
     private static final SecureRandom RANDOM = new SecureRandom();
-    private static final String VERSION_TERMINOS = "2026-09";
+    private static final String VERSION_TERMINOS = "2026-10-20";
 
     private final UsuarioRepository usuarios;
     private final SesionRepository sesiones;
@@ -59,6 +59,7 @@ public class AutenticacionService {
                 req.telefono().trim(), req.fechaNacimiento(), req.direccion().trim(),
                 SeguridadHash.password(req.password()), ahora, VERSION_TERMINOS,
                 SeguridadHash.sha256(codigo), ahora.plusMinutes(props.getVerificacionMinutos()));
+        usuario.autorizarDatos(ahora, VERSION_TERMINOS);
         usuarios.save(usuario);
         notificador.enviarCodigo(correo, usuario.getNombre(), codigo, props.getVerificacionMinutos());
         return new RegistroDto(correo, "Cuenta creada. Revisa tu correo para ingresar el código de verificación.",

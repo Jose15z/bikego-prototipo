@@ -30,7 +30,7 @@ public class BicicletaController {
     @GetMapping("/estaciones")
     public List<EstacionDto> estaciones() {
         return estaciones.findAll().stream()
-                .map(e -> new EstacionDto(e.getId(), e.getNombre(), e.getLatitud(), e.getLongitud()))
+                .map(e -> new EstacionDto(e.getId(), e.getNombre(), e.getLatitud(), e.getLongitud(), e.getReferencia()))
                 .toList();
     }
 

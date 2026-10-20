@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ViajeRepository extends JpaRepository<Viaje, Long> {
 
+    java.util.List<Viaje> findByEstado(EstadoViaje estado);
+
     boolean existsByUsuarioIdAndEstado(String usuarioId, EstadoViaje estado);
     java.util.List<Viaje> findByUsuarioIdOrderByHoraInicioDesc(String usuarioId);
     @org.springframework.data.jpa.repository.Lock(jakarta.persistence.LockModeType.PESSIMISTIC_WRITE)

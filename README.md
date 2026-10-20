@@ -42,7 +42,14 @@ cd backend
 mvn spring-boot:run
 ```
 
-El API queda en http://localhost:8080. Los datos se guardan en `backend/data/` y sobreviven a los reinicios. La consola de H2 está en http://localhost:8080/h2-console (JDBC URL `jdbc:h2:file:./data/bikego`, usuario `sa`, sin contraseña).
+Si el puerto 8080 ya está ocupado, puedes usar otro puerto sin tocar el código:
+
+```bash
+cd backend
+BIKEGO_PORT=8081 mvn spring-boot:run
+```
+
+El API queda en http://localhost:${BIKEGO_PORT:-8080}. Los datos se guardan en `backend/data/` y sobreviven a los reinicios. La consola de H2 está en http://localhost:${BIKEGO_PORT:-8080}/h2-console (JDBC URL `jdbc:h2:file:./data/bikego`, usuario `sa`, sin contraseña).
 
 En otra terminal:
 
@@ -226,3 +233,25 @@ java -jar target/bikego-backend-0.3.0.jar
 ```
 
 El JAR incorpora `frontend/dist` como recursos estáticos. Abrir `http://127.0.0.1:8080`. La verificación del Parcial 2 aprobó 50 pruebas JUnit y 19 comprobaciones HTTP sobre el ejecutable integrado. La gestión remota en Jira requiere confirmar acceso y sincronizar las claves del proyecto; los CSV de la entrega no acreditan cambios remotos.
+
+## Pruebas funcionales de interfaz
+
+La suite reproducible de [tests/e2e](tests/e2e/README.md) recorre las ocho funcionalidades con 25 escenarios en navegador y genera capturas. Se ejecuta con bases temporales independientes de los datos de la vista previa. La revisión actual aprobó además las 50 pruebas JUnit y 19 verificaciones HTTP del JAR. Incluye una regresión del cambio rápido de pantalla después de ajustar el radio del mapa.
+
+## Red de estaciones y códigos
+
+52 estaciones y 520 bicicletas iniciales, diez por estación. La última ampliación agrega Aeropuerto El Edén (acceso terrestre de terminal nacional), Mall Paraíso · Club Campestre, Soledén, Universidad La Gran Colombia · Sede campestre La Santa María y Parque de Recreación Popular. Las nuevas son EST-48 a EST-52 y BG-471 a BG-520; las 47 estaciones y 470 bicicletas anteriores se conservan.
+
+En **Explorar → Códigos de bicicletas**, filtra por estación y descarga los PNG; también están en docs/qr-prueba, con galería e índice. Los QR previos permanecen idénticos. Hay presencia en las diez comunas urbanas, además de los accesos del corredor del aeropuerto; no se certifica cobertura caminable universal ni infraestructura física instalada. Consulta [ubicaciones y cobertura](docs/ESTACIONES_Y_FLOTA_PRUEBA.md).
+
+## Registro, pago y documentos legales
+
+El registro requiere aceptar términos y autorizar datos por separado. Se guardan fecha y versión 2026-10-20 de ambas aceptaciones; los usuarios anteriores no se modifican retroactivamente. Los enlaces públicos /legal/terminos.html, /legal/privacidad.html y /legal/aviso.html están en registro y pie de página. Los contactos @bikego.example son ilustrativos y no reciben mensajes.
+
+El número de tarjeta admite espacios o guiones y vencimiento MM/AA o MM/AAAA. El teléfono admite formato internacional con espacios, paréntesis y guiones. La tarjeta está oculta por defecto y se limpia al guardar. Los pagos, candados y correos siguen siendo simulados; usa 4111 1111 1111 1111 y una fecha futura, sin datos bancarios reales. Los errores indican cómo corregir o reintentar.
+
+Verificaciones reproducibles: 65 JUnit; geometría de 52 estaciones y 520 bicicletas; lectura de 1042 PNG; registro y primer pago, consentimiento, recuperación de errores y mapa/QR en navegador. Consulta [tests/e2e](tests/e2e/README.md).
+
+## Interfaz y accesos exteriores
+
+Portada y acceso a cuenta con fotografías reales de Armenia, navegación adaptable y mapa con listado lateral. Los créditos de las fotografías están disponibles en la aplicación y en docs/FOTOGRAFIAS.md. Los puntos se sitúan junto a las vías de acceso y fuera de canchas y edificios. Pulsa un marcador para acercarte al acceso.

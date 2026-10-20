@@ -20,6 +20,7 @@ export interface Busqueda {
 }
 
 export interface Estacion {
+  referencia?: string
   id: string
   nombre: string
   latitud: number
@@ -42,7 +43,7 @@ export interface AuthResponse { token: string; usuario: Usuario }
 export interface RegistroResponse { correo: string; mensaje: string; codigoDesarrollo: string | null }
 export interface RegistroPayload {
   nombre: string; documento: string; correo: string; telefono: string; fechaNacimiento: string
-  direccion: string; password: string; aceptaTerminos: boolean
+  direccion: string; password: string; aceptaTerminos: boolean; aceptaPrivacidad: boolean
 }
 
 export interface Viaje {
