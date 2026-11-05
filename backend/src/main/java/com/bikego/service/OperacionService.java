@@ -53,9 +53,9 @@ public class OperacionService {
             return new Zona(e.getId(),e.getNombre(),e.getLatitud(),e.getLongitud(),Math.round(Geo.distanciaMetros(lat,lng,e.getLatitud(),e.getLongitud())),distanciaBorde<=30);
         }).sorted(Comparator.comparingLong(Zona::distanciaMetros)).toList();
     }
-    public ReciboDto finalizar(Long id, String usuario, PosicionRequest p) {
+    public DatosRecibo finalizar(Long id, String usuario, PosicionDevolucion p) {
         Viaje v = propio(id,usuario);
-        if (v.getEstado()==EstadoViaje.FINALIZADO) return ReciboDto.de(v);
+        if (v.getEstado()==EstadoViaje.FINALIZADO) return DatosRecibo.de(v);
         List<Zona> zonas = zonas(p.latitud(),p.longitud());
         Zona zona = zonas.stream().filter(Zona::dentro).findFirst().orElseThrow(() ->
             new NegocioException(CodigoError.FUERA_DE_ZONA, zonas.isEmpty()?"No hay zonas habilitadas":
@@ -77,7 +77,7 @@ public class OperacionService {
         long recargo=Duration.between(v.getHoraInicio(),fin).getSeconds()>14400?props.getRecargoLargo():0;
         v.finalizar(fin,p.latitud(),p.longitud(),props.getTarifaBase(),props.getTarifaMinuto(),recargo);
         bici.devolver(estaciones.findById(zona.id()).orElseThrow(),p.latitud(),p.longitud());
-        return ReciboDto.de(v);
+        return DatosRecibo.de(v);
     }
     public ReciboDto recibo(Long id,String usuario) {
         Viaje v=propio(id,usuario);

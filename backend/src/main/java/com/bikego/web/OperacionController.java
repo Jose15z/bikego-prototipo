@@ -29,7 +29,8 @@ public class OperacionController {
     }
     @GetMapping("/zonas") public List<OperacionService.Zona> zonas(@RequestParam double lat,@RequestParam double lng) { return operaciones.zonas(lat,lng); }
     @PostMapping("/viajes/{id}/finalizar") public ReciboDto finalizar(@PathVariable Long id,@Valid @RequestBody PosicionRequest r,@RequestHeader(value="Authorization",required=false) String token) {
-        return operaciones.finalizar(id,usuario(token).getId(),r);
+        return ReciboDto.de(operaciones.finalizar(id, usuario(token).getId(),
+            new PosicionDevolucion(r.latitud(), r.longitud())));
     }
     @GetMapping("/viajes/{id}/recibo") public ReciboDto recibo(@PathVariable Long id,@RequestHeader(value="Authorization",required=false) String token) {return operaciones.recibo(id,usuario(token).getId());}
     @PostMapping("/viajes/{id}/pago") public ReciboDto pagar(@PathVariable Long id,@RequestHeader(value="Authorization",required=false) String token) {return operaciones.pagar(id,usuario(token).getId());}

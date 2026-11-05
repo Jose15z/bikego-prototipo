@@ -56,7 +56,7 @@ class RequisitosRegistroNotificacionesTest {
     }
     @Test void reciboSeEntregaEnBandejaPrivadaConTodosLosDatos() throws Exception {
         long id=alquiler.iniciar("U-001","BG-001","BG-001").idViaje();
-        operaciones.finalizar(id,"U-001",new PosicionRequest(4.5325,-75.6736,1.0));var r=operaciones.pagar(id,"U-001");
+        operaciones.finalizar(id,"U-001",new PosicionDevolucion(4.5325,-75.6736));var r=operaciones.pagar(id,"U-001");
         var entregados=mensajes.findByDestinatarioOrderByFechaDesc("laura@correo.com");
         assertThat(entregados).hasSize(1);assertThat(entregados.get(0).contenido).contains(r.numero(),"Duración:","Tarifa base:","Recargo:","Total:","PROCESADO");
         String token=auth.iniciarSesion(new LoginRequest("mateo@correo.com","BikeGo123!")).token();

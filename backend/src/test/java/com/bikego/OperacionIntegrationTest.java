@@ -41,7 +41,7 @@ class OperacionIntegrationTest {
     @SpyBean PasarelaPagoSimulada pasarela;
     private Instant instante;
     private Usuario operador;
-    private final PosicionRequest plaza = new PosicionRequest(4.5325,-75.6736,5.0);
+    private final PosicionDevolucion plaza = new PosicionDevolucion(4.5325,-75.6736);
 
     @BeforeEach void preparar() {
         instante=Instant.parse("2026-10-17T15:00:00Z");
@@ -69,6 +69,26 @@ class OperacionIntegrationTest {
         verify(notificador).recibo(eq("laura@correo.com"),any());
         assertThat(operaciones.finalizar(id,"U-001",plaza).total()).isEqualTo(4000);
     }
+    @Test void cierreHttpConservaReciboYNoVuelveABloquear() throws Exception {
+        long id = iniciar();
+        avanzar(10);
+        String token = auth.iniciarSesion(new LoginRequest("laura@correo.com", "BikeGo123!")).token();
+        String esperado = """
+            {"idViaje":%d,"numero":"%s","bicicleta":"BG-001","fecha":"2026-10-17T10:10:00",
+             "minutos":10,"tarifaBase":1500,"tarifaMinuto":250,"recargo":0,"total":4000,
+             "estadoPago":"PENDIENTE","conIncidente":false}
+            """.formatted(id, "BG-" + String.format("%08d", id));
+        for (int i = 0; i < 2; i++) {
+            mvc.perform(post("/api/viajes/" + id + "/finalizar")
+                .header("Authorization", "Bearer " + token).contentType(MediaType.APPLICATION_JSON)
+                .content("""
+                    {"latitud":4.5325,"longitud":-75.6736,"precision":5}
+                    """))
+                .andExpect(status().isOk()).andExpect(content().json(esperado, true));
+        }
+        verify(candado, times(1)).enviarBloqueo("BG-001");
+    }
+
     @Test void calculaTarifasDe45Y250Minutos() {
         long id=iniciar();avanzar(45);
         assertThat(operaciones.finalizar(id,"U-001",plaza).total()).isEqualTo(12750);
@@ -82,7 +102,7 @@ class OperacionIntegrationTest {
     }
     @Test void fueraDeZonaNoBloqueaNiFinaliza() {
         long id=iniciar();
-        assertThatThrownBy(() -> operaciones.finalizar(id,"U-001",new PosicionRequest(4.6,-75.6,5.0)))
+        assertThatThrownBy(() -> operaciones.finalizar(id,"U-001",new PosicionDevolucion(4.6,-75.6)))
             .isInstanceOf(NegocioException.class).hasMessageContaining("Acércate");
         verify(candado,never()).enviarBloqueo(anyString());
         assertThat(alquiler.consultarViaje(id).estado()).isEqualTo("EN_CURSO");
